@@ -4,12 +4,12 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 0: Confirm the foundation
 
-- [ ] Choose the project name and basic visual direction.
-- [ ] Choose the implementation stack, repository structure, and hosting target.
-- [ ] Confirm the primary audience: backend beginners, frontend developers, or both.
-- [ ] Choose the first scenario: for example, placing an order in a shopping application.
-- [ ] Define the smallest successful MVP and record anything explicitly deferred.
-- [ ] Create a short decision log for changes to scope, content, and architecture.
+- [x] Choose the project name and basic visual direction.
+- [x] Choose the implementation stack, repository structure, and hosting target.
+- [x] Confirm the primary audience: backend beginners, frontend developers, or both.
+- [x] Choose the first scenario: for example, placing an order in a shopping application.
+- [x] Define the smallest successful MVP and record anything explicitly deferred.
+- [x] Create a short decision log for changes to scope, content, and architecture.
 
 ## Phase 1: Define the learning journey
 
