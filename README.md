@@ -180,13 +180,19 @@ The first release is useful if a learner can:
 - Find a relevant guide by searching for either a tool or the problem they want to solve.
 - Identify a reasonable next topic to learn and why it follows.
 
+## Implementation checklist
+
+The detailed implementation checklist is maintained separately so an agent can work from it directly:
+
+- [TODO.md](TODO.md)
+
 ## Suggested delivery stages
 
-1. **Define the learning journey:** write the order of steps and decide what the first example request demonstrates.
-2. **Create the content:** draft and review the three starter guides and their diagrams.
-3. **Build the guide experience:** implement the home page, request flow, guide pages, and search.
-4. **Review with learners:** observe where explanations or diagrams are confusing and revise them.
-5. **Expand deliberately:** add new categories based on learner needs, then evaluate whether an AI assistant would solve a real gap.
+1. **Define the learning journey:** complete Phases 0–1 in [TODO.md](TODO.md).
+2. **Create the content:** complete Phases 2–3 in [TODO.md](TODO.md).
+3. **Build the guide experience:** complete Phases 4–5 in [TODO.md](TODO.md).
+4. **Review with learners:** complete Phase 6 in [TODO.md](TODO.md).
+5. **Release and expand deliberately:** complete Phase 7 in [TODO.md](TODO.md).
 
 ## Open decisions
 
