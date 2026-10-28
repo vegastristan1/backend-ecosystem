@@ -13,10 +13,10 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 1: Define the learning journey
 
-- [ ] Write the complete request journey from client request to response.
-- [ ] Select the steps that appear in the first interactive flow.
-- [ ] Decide which infrastructure topics are shown around the request flow.
-- [ ] Define what the learner should understand after each step.
+- [x] Write the complete request journey from client request to response.
+- [x] Select the steps that appear in the first interactive flow.
+- [x] Decide which infrastructure topics are shown around the request flow.
+- [x] Define what the learner should understand after each step.
 - [ ] Map prerequisites, related guides, and recommended next topics.
 - [ ] Sketch the home page, request journey, guide page, and search experience.
 - [ ] Check that the journey explains concepts before naming products.

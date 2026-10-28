@@ -61,3 +61,7 @@ The three starter guides are the first detailed guides, not the entire beginner 
 - Chose a shopping-order scenario because it naturally demonstrates routing, application logic, caching, persistence, and responses.
 - Chose structured local content because the MVP does not require user-generated or frequently edited content.
 - Chose Vercel because it provides a simple deployment path for a Vite frontend.
+- Selected the initial interactive flow: client, HTTP request, reverse proxy, backend application, cache, database, and response. This is an initial MVP decision and may change as new information emerges.
+- Approved the first example journey: a learner clicks "Place Order," the browser creates an HTTP request, the reverse proxy routes it, the backend validates and processes it, the cache is checked, the database is read or updated, and the response returns to the browser. This journey may be revised as new information emerges.
+- Grouped supporting infrastructure around the main journey: DNS and TLS before the flow, containers, cloud hosting, and monitoring around the running system, and background jobs or queues as optional asynchronous work after the response.
+- Defined the learner outcomes for the journey: understand client requests and responses, routing at the reverse proxy, validation and business rules in the backend, cache speed and staleness tradeoffs, durable database storage, success and failure responses, and the supporting role of infrastructure topics.
