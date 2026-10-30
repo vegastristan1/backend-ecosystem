@@ -23,12 +23,12 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 2: Design the content model
 
-- [ ] Turn the content model into a concrete schema or data format.
-- [ ] Add fields for guide status, sources, and `lastReviewed`.
-- [ ] Decide how diagrams and request-flow steps are represented in data.
-- [ ] Define categories, tags, aliases, and searchable problem descriptions.
-- [ ] Define how uncertain tool names are reviewed before publication.
-- [ ] Create a content template based on purpose, position, visual explanation, example, tradeoffs, prerequisites, and related guides.
+- [x] Turn the content model into a concrete schema or data format.
+- [x] Add fields for guide status, sources, and `lastReviewed`.
+- [x] Decide how diagrams and request-flow steps are represented in data.
+- [x] Define categories, tags, aliases, and searchable problem descriptions.
+- [x] Define how uncertain tool names are reviewed before publication.
+- [x] Create a content template based on purpose, position, visual explanation, example, tradeoffs, prerequisites, and related guides.
 
 ## Phase 3: Create and review the starter content
 

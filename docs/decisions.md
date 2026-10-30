@@ -65,3 +65,12 @@ The three starter guides are the first detailed guides, not the entire beginner 
 - Approved the first example journey: a learner clicks "Place Order," the browser creates an HTTP request, the reverse proxy routes it, the backend validates and processes it, the cache is checked, the database is read or updated, and the response returns to the browser. This journey may be revised as new information emerges.
 - Grouped supporting infrastructure around the main journey: DNS and TLS before the flow, containers, cloud hosting, and monitoring around the running system, and background jobs or queues as optional asynchronous work after the response.
 - Defined the learner outcomes for the journey: understand client requests and responses, routing at the reverse proxy, validation and business rules in the backend, cache speed and staleness tradeoffs, durable database storage, success and failure responses, and the supporting role of infrastructure topics.
+
+### 2026-10-30
+
+- Added a typed local content model in `src/content/types.ts` for guides, sources, publication review, diagrams, and request-flow steps.
+- Chose explicit guide statuses: `draft`, `review`, `published`, and `archived`.
+- Represented visuals as structured data with a diagram kind, explanation, fallback text, and optional step states so every visual can support accessible non-animated use.
+- Added aliases and searchable problem descriptions to support search by product, concept, or learner goal.
+- Added publication-review metadata for uncertain tool names. A guide must record whether names are confirmed, whether review is still required, and any review notes.
+- Added the approved place-order request flow and a reusable guide template under `src/content/`.
