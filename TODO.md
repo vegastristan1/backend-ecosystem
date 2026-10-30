@@ -35,9 +35,9 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Draft the NGINX / reverse proxy guide.
 - [x] Draft the caching / Redis guide.
 - [x] Draft the database guide.
-- [ ] Create the request-routing visual.
-- [ ] Create the cache hit / miss visual.
-- [ ] Create the database read / write visual.
+- [x] Create the request-routing visual.
+- [x] Create the cache hit / miss visual.
+- [x] Create the database read / write visual.
 - [ ] Add plain-language examples and explain the relevant tradeoffs.
 - [ ] Add alternatives, prerequisites, related guides, and source links.
 - [ ] Review every guide for accuracy, consistent terminology, and beginner readability.
