@@ -9,7 +9,7 @@ export const databaseGuide: Guide = {
   name: 'Databases and durable persistence',
   category: 'data',
   tags: ['database', 'persistence', 'sql', 'postgresql', 'transactions'],
-  status: 'draft',
+  status: 'review',
   concept:
     'A database stores application data in a structured form so it can be queried, changed, protected, and recovered over time.',
   problemSolved:
@@ -141,9 +141,9 @@ export const databaseGuide: Guide = {
   lastReviewed: '2026-10-30',
   publicationReview: {
     toolNameConfidence: 'confirmed',
-    requiresReview: true,
+    requiresReview: false,
     reviewNotes:
-      'Draft completed. Review transaction wording, relational versus document-database comparisons, alternatives, and source links before publication.',
+      'Phase 3 content review completed. Revisit during application integration and before publication.',
   },
 }
 

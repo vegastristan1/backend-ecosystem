@@ -9,7 +9,7 @@ export const reverseProxyGuide: Guide = {
   name: 'NGINX and reverse proxies',
   category: 'networking',
   tags: ['reverse proxy', 'routing', 'nginx', 'http', 'web server'],
-  status: 'draft',
+  status: 'review',
   concept: 'A reverse proxy is a server that receives a client request and forwards it to an application server on the client’s behalf.',
   problemSolved:
     'It gives clients one public entry point while hiding, routing, and optionally balancing traffic across backend services.',
@@ -125,9 +125,9 @@ export const reverseProxyGuide: Guide = {
   lastReviewed: '2026-10-30',
   publicationReview: {
     toolNameConfidence: 'confirmed',
-    requiresReview: true,
+    requiresReview: false,
     reviewNotes:
-      'Draft completed. Review the wording, routing visual, alternatives, and source links before publication.',
+      'Phase 3 content review completed. Revisit during application integration and before publication.',
   },
 }
 

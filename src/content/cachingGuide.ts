@@ -9,7 +9,7 @@ export const cachingGuide: Guide = {
   name: 'Caching with Redis',
   category: 'data',
   tags: ['cache', 'caching', 'redis', 'cache-aside', 'performance'],
-  status: 'draft',
+  status: 'review',
   concept:
     'A cache is a fast temporary copy of data that an application can reuse instead of repeating the slower primary lookup every time.',
   problemSolved:
@@ -141,9 +141,9 @@ export const cachingGuide: Guide = {
   lastReviewed: '2026-10-30',
   publicationReview: {
     toolNameConfidence: 'confirmed',
-    requiresReview: true,
+    requiresReview: false,
     reviewNotes:
-      'Draft completed. Review cache consistency wording, TTL examples, alternatives, and source links before publication.',
+      'Phase 3 content review completed. Revisit during application integration and before publication.',
   },
 }
 

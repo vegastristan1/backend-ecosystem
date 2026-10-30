@@ -38,9 +38,9 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Create the request-routing visual.
 - [x] Create the cache hit / miss visual.
 - [x] Create the database read / write visual.
-- [ ] Add plain-language examples and explain the relevant tradeoffs.
-- [ ] Add alternatives, prerequisites, related guides, and source links.
-- [ ] Review every guide for accuracy, consistent terminology, and beginner readability.
+- [x] Add plain-language examples and explain the relevant tradeoffs.
+- [x] Add alternatives, prerequisites, related guides, and source links.
+- [x] Review every guide for accuracy, consistent terminology, and beginner readability.
 
 ## Phase 4: Build the application shell
 
