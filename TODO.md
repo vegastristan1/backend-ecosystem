@@ -17,9 +17,9 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Select the steps that appear in the first interactive flow.
 - [x] Decide which infrastructure topics are shown around the request flow.
 - [x] Define what the learner should understand after each step.
-- [ ] Map prerequisites, related guides, and recommended next topics.
-- [ ] Sketch the home page, request journey, guide page, and search experience.
-- [ ] Check that the journey explains concepts before naming products.
+- [x] Map prerequisites, related guides, and recommended next topics.
+- [x] Sketch the home page, request journey, guide page, and search experience.
+- [x] Check that the journey explains concepts before naming products.
 
 ## Phase 2: Design the content model
 

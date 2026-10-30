@@ -186,6 +186,10 @@ The detailed implementation checklist is maintained separately so an agent can w
 
 - [TODO.md](TODO.md)
 
+## Learning journey specification
+
+The Phase 1 prerequisite map, related-guide relationships, recommended next topics, page sketches, and concept-before-product rule are documented in [docs/learning-journey.md](docs/learning-journey.md).
+
 ## Suggested delivery stages
 
 1. **Define the learning journey:** complete Phases 0–1 in [TODO.md](TODO.md).
