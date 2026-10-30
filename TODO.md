@@ -32,7 +32,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 3: Create and review the starter content
 
-- [ ] Draft the NGINX / reverse proxy guide.
+- [x] Draft the NGINX / reverse proxy guide.
 - [ ] Draft the caching / Redis guide.
 - [ ] Draft the database guide.
 - [ ] Create the request-routing visual.
