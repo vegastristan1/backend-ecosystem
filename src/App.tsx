@@ -15,19 +15,20 @@ function isGuidesPage(hash: string) {
 }
 
 function App() {
-  const [guideId, setGuideId] = useState(() => guideIdFromHash(window.location.hash))
+  const [currentHash, setCurrentHash] = useState(() => window.location.hash)
 
   useEffect(() => {
     function handleHashChange() {
-      setGuideId(guideIdFromHash(window.location.hash))
+      setCurrentHash(window.location.hash)
     }
 
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
+  const guideId = guideIdFromHash(currentHash)
   const guide = guideId ? guides[guideId] : undefined
-  const showGuides = isGuidesPage(window.location.hash)
+  const showGuides = isGuidesPage(currentHash)
 
   return (
     <AppShell>
