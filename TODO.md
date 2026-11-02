@@ -44,7 +44,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 4: Build the application shell
 
-- [ ] Set up the application, development workflow, and deployment preview.
+- [x] Set up the application, development workflow, and deployment preview.
 - [ ] Implement the shared layout, navigation, typography, colors, and responsive behavior.
 - [ ] Implement accessible headings, focus states, keyboard navigation, and semantic structure.
 - [ ] Add diagram text alternatives and a non-animated fallback for every visual.

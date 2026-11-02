@@ -190,6 +190,12 @@ The detailed implementation checklist is maintained separately so an agent can w
 
 The Phase 1 prerequisite map, related-guide relationships, recommended next topics, page sketches, and concept-before-product rule are documented in [docs/learning-journey.md](docs/learning-journey.md).
 
+## Development and deployment preview
+
+Run the app locally with `npm run dev`. Check the production build with `npm run build`, then serve that build locally with `npm run preview`.
+
+The Vercel project uses the repository root (`./`), the Vite framework preset, `npm run build` as its build command, and `dist` as its output directory. The first deployment was verified at [backend-ecosystem.vercel.app](https://backend-ecosystem.vercel.app/).
+
 ## Suggested delivery stages
 
 1. **Define the learning journey:** complete Phases 0–1 in [TODO.md](TODO.md).
