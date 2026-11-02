@@ -34,6 +34,24 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
+.skip-link {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  transform: translateY(-160%);
+  border-radius: 6px;
+  background: var(--color-ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .app-shell {
   display: flex;
   min-height: 100vh;

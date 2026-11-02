@@ -9,6 +9,9 @@ const upcomingSections = ['Journey', 'Guides', 'Search']
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-shell" id="top">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <header className="site-header">
         <a className="brand" href="#top">
           <span className="brand-mark" aria-hidden="true">BE</span>
@@ -25,7 +28,9 @@ export function AppShell({ children }: AppShellProps) {
           </ul>
         </nav>
       </header>
-      <main className="main-content">{children}</main>
+      <main className="main-content" id="main-content" tabIndex={-1}>
+        {children}
+      </main>
       <footer className="site-footer">
         <p>Understand the problems. Follow the request. Learn the system.</p>
       </footer>

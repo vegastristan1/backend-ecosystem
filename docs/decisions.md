@@ -80,3 +80,4 @@ The three starter guides are the first detailed guides, not the entire beginner 
 - Added a reusable application shell for the site header, main content area, and footer. Journey, Guides, and Search appear as non-clickable “Coming soon” items until their destinations are built in Phase 5, avoiding dead links.
 - Chose a system sans-serif font stack and CSS color variables so the shell has consistent styling without an external font dependency.
 - Made the header and navigation stack on narrow screens while retaining a horizontal layout on wider screens.
+- Added a keyboard-visible “Skip to content” link and a focusable main landmark so keyboard users can bypass the header. Kept future navigation entries as non-focusable text until their pages exist.
