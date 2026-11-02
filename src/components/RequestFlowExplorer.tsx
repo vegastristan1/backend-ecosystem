@@ -27,6 +27,22 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
         Step {activeIndex + 1} of {flow.steps.length}
       </div>
 
+      <ol className="journey-system-map" aria-label="Backend system map">
+        {flow.steps.map((step, index) => (
+          <li className="journey-system-map-item" key={step.componentId}>
+            <span
+              className={index === activeIndex ? 'journey-component journey-component--active' : 'journey-component'}
+              aria-current={index === activeIndex ? 'step' : undefined}
+            >
+              {step.title}
+            </span>
+            {index < flow.steps.length - 1 && (
+              <span className="journey-system-connector" aria-hidden="true">→</span>
+            )}
+          </li>
+        ))}
+      </ol>
+
       <div className="journey-step-panel" aria-labelledby="active-step-title">
         <span className="journey-step-number" aria-hidden="true">
           {String(activeStep.order).padStart(2, '0')}
