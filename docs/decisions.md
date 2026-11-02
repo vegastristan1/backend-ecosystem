@@ -74,3 +74,9 @@ The three starter guides are the first detailed guides, not the entire beginner 
 - Added aliases and searchable problem descriptions to support search by product, concept, or learner goal.
 - Added publication-review metadata for uncertain tool names. A guide must record whether names are confirmed, whether review is still required, and any review notes.
 - Added the approved place-order request flow and a reusable guide template under `src/content/`.
+
+### 2026-11-02
+
+- Added a reusable application shell for the site header, main content area, and footer. Journey, Guides, and Search appear as non-clickable “Coming soon” items until their destinations are built in Phase 5, avoiding dead links.
+- Chose a system sans-serif font stack and CSS color variables so the shell has consistent styling without an external font dependency.
+- Made the header and navigation stack on narrow screens while retaining a horizontal layout on wider screens.
