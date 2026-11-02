@@ -53,7 +53,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 ## Phase 5: Build the MVP experience
 
 - [x] Build the home page and explain the purpose of the learning journey.
-- [ ] Build the interactive or step-controlled request flow.
+- [x] Build the interactive or step-controlled request flow.
 - [ ] Highlight the active component as the learner moves through the request.
 - [ ] Link each component to its guide and related concepts.
 - [ ] Build the three starter guide pages.

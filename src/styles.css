@@ -246,6 +246,131 @@ h1 {
   background: var(--color-paper);
 }
 
+.journey-explorer {
+  display: grid;
+  gap: 20px;
+  padding: clamp(20px, 5vw, 34px);
+  border: 1px solid #b9d9cf;
+  border-radius: 16px;
+  background: #f0f8f4;
+}
+
+.journey-progress {
+  color: var(--color-accent-dark);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.journey-step-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--color-paper);
+  box-shadow: 0 8px 24px rgb(25 49 59 / 6%);
+}
+
+.journey-step-number {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.journey-step-panel .eyebrow {
+  margin-bottom: 5px;
+}
+
+.journey-step-panel h3 {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(20px, 3vw, 26px);
+}
+
+.journey-step-panel p:last-child {
+  max-width: 640px;
+  margin: 7px 0 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+.journey-step-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-step-button,
+.journey-controls button {
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  cursor: pointer;
+  font: inherit;
+}
+
+.journey-step-button {
+  display: flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.journey-step-button > span {
+  color: var(--color-accent);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.journey-step-button:hover,
+.journey-step-button--active {
+  border-color: var(--color-accent);
+}
+
+.journey-step-button--active {
+  background: #dff1eb;
+  color: var(--color-accent-dark);
+}
+
+.journey-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.journey-controls button {
+  min-height: 42px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.journey-controls button:not(:disabled):hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+}
+
+.journey-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .section-intro {
   margin-bottom: 20px;
 }

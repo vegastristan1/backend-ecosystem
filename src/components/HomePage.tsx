@@ -1,4 +1,5 @@
 import { orderRequestFlow } from '../content/requestFlow'
+import { RequestFlowExplorer } from './RequestFlowExplorer'
 
 const starterTopics = ['Reverse proxy', 'Cache', 'Database']
 
@@ -32,6 +33,8 @@ export function HomePage() {
           </p>
         </div>
       </section>
+
+      <RequestFlowExplorer flow={orderRequestFlow} />
 
       <section
         className="journey-preview"
