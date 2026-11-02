@@ -10,7 +10,7 @@ export function GuideVisual({ id, visual }: GuideVisualProps) {
     <figure className="guide-visual" aria-labelledby={`${id}-title`}>
       <figcaption className="visual-caption">
         <p className="eyebrow">Static diagram</p>
-        <h3 id={`${id}-title`}>{visual.title}</h3>
+        <h2 id={`${id}-title`}>{visual.title}</h2>
         <p>{visual.description}</p>
       </figcaption>
 

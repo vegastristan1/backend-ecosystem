@@ -48,7 +48,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Implement the shared layout, navigation, typography, colors, and responsive behavior.
 - [x] Implement accessible headings, focus states, keyboard navigation, and semantic structure.
 - [x] Add diagram text alternatives and a non-animated fallback for every visual.
-- [ ] Add a reusable guide-page layout driven by structured content.
+- [x] Add a reusable guide-page layout driven by structured content.
 
 ## Phase 5: Build the MVP experience
 

@@ -82,3 +82,4 @@ The three starter guides are the first detailed guides, not the entire beginner 
 - Made the header and navigation stack on narrow screens while retaining a horizontal layout on wider screens.
 - Added a keyboard-visible “Skip to content” link and a focusable main landmark so keyboard users can bypass the header. Kept future navigation entries as non-focusable text until their pages exist.
 - Rendered the three starter diagrams as static figures with ordered text steps and a visible text alternative. Kept visual descriptions available in the normal page reading order; diagrams do not rely on animation or color to communicate their content.
+- Added a reusable guide page driven by the typed `Guide` content. It presents the concept, position, visual, steps, example, benefits, tradeoffs, alternatives, guide relationships, sources, review status, and review date. Related-guide names remain plain text until Phase 5 implements navigation.
