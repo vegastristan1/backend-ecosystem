@@ -4,7 +4,10 @@ interface AppShellProps {
   children: ReactNode
 }
 
-const upcomingSections = ['Journey', 'Guides', 'Search']
+const navigationItems = [
+  { label: 'Journey', href: '#journey-preview' },
+  { label: 'Guides', href: '#guides' },
+]
 
 export function AppShell({ children }: AppShellProps) {
   return (
@@ -19,12 +22,15 @@ export function AppShell({ children }: AppShellProps) {
         </a>
         <nav aria-label="Main navigation">
           <ul className="navigation-list">
-            {upcomingSections.map((section) => (
-              <li className="navigation-item" key={section}>
-                <span>{section}</span>
-                <span className="coming-soon">Coming soon</span>
+            {navigationItems.map((item) => (
+              <li className="navigation-item" key={item.label}>
+                <a href={item.href}>{item.label}</a>
               </li>
             ))}
+            <li className="navigation-item">
+              <span>Search</span>
+              <span className="coming-soon">Coming soon</span>
+            </li>
           </ul>
         </nav>
       </header>

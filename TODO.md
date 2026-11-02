@@ -56,7 +56,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Build the interactive or step-controlled request flow.
 - [x] Highlight the active component as the learner moves through the request.
 - [x] Link each component to its guide and related concepts.
-- [ ] Build the three starter guide pages.
+- [x] Build the three starter guide pages.
 - [ ] Add search by tool name, concept, and problem solved.
 - [ ] Add related guides and "learn next" links.
 - [ ] Add loading, empty, error, and no-results states.
