@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { guides } from '../content/guides'
 import type { RequestFlow } from '../content/types'
 
 interface RequestFlowExplorerProps {
@@ -8,6 +9,7 @@ interface RequestFlowExplorerProps {
 export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const activeStep = flow.steps[activeIndex]
+  const activeGuide = activeStep.guideId ? guides[activeStep.guideId] : undefined
   const isFirstStep = activeIndex === 0
   const isLastStep = activeIndex === flow.steps.length - 1
 
@@ -51,6 +53,30 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
           <p className="eyebrow">Current step</p>
           <h3 id="active-step-title">{activeStep.title}</h3>
           <p>{activeStep.explanation}</p>
+          {activeGuide ? (
+            <div className="journey-guide-links">
+              <a className="journey-guide-link" href={`#guide/${activeGuide.id}`}>
+                Read the {activeGuide.name} guide <span aria-hidden="true">→</span>
+              </a>
+              {activeGuide.relatedGuides.length > 0 && (
+                <span className="journey-related-links">
+                  Related:{' '}
+                  {activeGuide.relatedGuides.map((guideId, index) => {
+                    const relatedGuide = guides[guideId]
+                    if (!relatedGuide) return null
+                    return (
+                      <span key={guideId}>
+                        {index > 0 && ', '}
+                        <a href={`#guide/${relatedGuide.id}`}>{relatedGuide.name}</a>
+                      </span>
+                    )
+                  })}
+                </span>
+              )}
+            </div>
+          ) : (
+            <p className="journey-concept-note">A dedicated guide for this concept is coming later.</p>
+          )}
         </div>
       </div>
 

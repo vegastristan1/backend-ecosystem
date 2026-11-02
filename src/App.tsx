@@ -1,10 +1,31 @@
+import { useEffect, useState } from 'react'
 import { AppShell } from './components/AppShell'
+import { GuidePage } from './components/GuidePage'
 import { HomePage } from './components/HomePage'
+import { guides } from './content/guides'
+
+function guideIdFromHash(hash: string) {
+  const match = hash.match(/^#guide\/(.+)$/)
+  return match?.[1] ?? null
+}
 
 function App() {
+  const [guideId, setGuideId] = useState(() => guideIdFromHash(window.location.hash))
+
+  useEffect(() => {
+    function handleHashChange() {
+      setGuideId(guideIdFromHash(window.location.hash))
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  const guide = guideId ? guides[guideId] : undefined
+
   return (
     <AppShell>
-      <HomePage />
+      {guide ? <GuidePage guide={guide} /> : <HomePage />}
     </AppShell>
   )
 }

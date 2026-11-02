@@ -344,6 +344,37 @@ h1 {
   line-height: 1.65;
 }
 
+.journey-guide-links {
+  display: grid;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.journey-guide-link,
+.journey-related-links a,
+.guide-back-link {
+  color: var(--color-accent-dark);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.journey-related-links,
+.journey-concept-note {
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.journey-concept-note {
+  margin: 15px 0 0 !important;
+  font-style: italic;
+}
+
+.guide-back-link {
+  width: fit-content;
+  margin-top: -8px;
+}
+
 .journey-step-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));

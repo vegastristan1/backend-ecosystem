@@ -57,6 +57,10 @@ export function GuidePage({ guide }: GuidePageProps) {
         </span>
       </header>
 
+      <a className="guide-back-link" href="#journey-preview">
+        ← Back to the request journey
+      </a>
+
       <aside className="guide-position" aria-label="Where this fits">
         <strong>Where it fits</strong>
         <p>{guide.position}</p>
