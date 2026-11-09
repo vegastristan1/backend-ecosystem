@@ -77,18 +77,18 @@ export function HomePage() {
             <p>Get the big picture, from browser request to response.</p>
             <span className="starting-point-action">See the preview <span aria-hidden="true">→</span></span>
           </a>
-          <article className="starting-point">
+          <a className="starting-point starting-point--link" href="#guides">
             <span className="starting-point-kicker">Three deep dives</span>
             <h3>Explore starter guides</h3>
             <p>{starterTopics.join(' · ')}</p>
-            <span className="coming-soon">Guide pages coming soon</span>
-          </article>
-          <article className="starting-point">
+            <span className="starting-point-action">Browse guides <span aria-hidden="true">→</span></span>
+          </a>
+          <a className="starting-point starting-point--link" href="#search">
             <span className="starting-point-kicker">Find a topic</span>
             <h3>Search by idea or problem</h3>
             <p>Look up a tool, a concept, or something you want to solve.</p>
-            <span className="coming-soon">Search coming soon</span>
-          </article>
+            <span className="starting-point-action">Search guides <span aria-hidden="true">→</span></span>
+          </a>
         </div>
       </section>
     </div>

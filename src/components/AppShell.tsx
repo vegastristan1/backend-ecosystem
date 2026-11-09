@@ -7,6 +7,7 @@ interface AppShellProps {
 const navigationItems = [
   { label: 'Journey', href: '#journey-preview' },
   { label: 'Guides', href: '#guides' },
+  { label: 'Search', href: '#search' },
 ]
 
 export function AppShell({ children }: AppShellProps) {
@@ -27,10 +28,6 @@ export function AppShell({ children }: AppShellProps) {
                 <a href={item.href}>{item.label}</a>
               </li>
             ))}
-            <li className="navigation-item">
-              <span>Search</span>
-              <span className="coming-soon">Coming soon</span>
-            </li>
           </ul>
         </nav>
       </header>

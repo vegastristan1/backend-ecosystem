@@ -3,6 +3,7 @@ import { AppShell } from './components/AppShell'
 import { GuidePage } from './components/GuidePage'
 import { GuidesPage } from './components/GuidesPage'
 import { HomePage } from './components/HomePage'
+import { SearchPage } from './components/SearchPage'
 import { guides } from './content/guides'
 
 function guideIdFromHash(hash: string) {
@@ -12,6 +13,10 @@ function guideIdFromHash(hash: string) {
 
 function isGuidesPage(hash: string) {
   return hash === '#guides'
+}
+
+function isSearchPage(hash: string) {
+  return hash === '#search'
 }
 
 function App() {
@@ -29,10 +34,19 @@ function App() {
   const guideId = guideIdFromHash(currentHash)
   const guide = guideId ? guides[guideId] : undefined
   const showGuides = isGuidesPage(currentHash)
+  const showSearch = isSearchPage(currentHash)
 
   return (
     <AppShell>
-      {guide ? <GuidePage guide={guide} /> : showGuides ? <GuidesPage guides={Object.values(guides)} /> : <HomePage />}
+      {guide ? (
+        <GuidePage guide={guide} />
+      ) : showGuides ? (
+        <GuidesPage guides={Object.values(guides)} />
+      ) : showSearch ? (
+        <SearchPage guides={Object.values(guides)} />
+      ) : (
+        <HomePage />
+      )}
     </AppShell>
   )
 }
