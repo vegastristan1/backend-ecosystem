@@ -135,6 +135,7 @@ Learners should be able to search by tool name, concept, or problem—for exampl
 - More example architectures and request scenarios.
 - Knowledge checks, exercises, and saved learning progress.
 - Side-by-side comparisons and guided technology recommendations.
+- Step-controlled animation for guide-page diagrams (no autoplay).
 - Optional AI learning assistant grounded in the published guide content.
 
 ### Out of scope for the first release
@@ -204,13 +205,15 @@ The Vercel project uses the repository root (`./`), the Vite framework preset, `
 4. **Review with learners:** complete Phase 6 in [TODO.md](TODO.md).
 5. **Release and expand deliberately:** complete Phase 7 in [TODO.md](TODO.md).
 
-## Open decisions
+## Decisions
 
-- Project name and visual identity.
-- Preferred implementation stack and hosting target.
-- Whether visuals should be animated, step-controlled, or both.
-- How sources and guide updates will be reviewed.
-- Which audience and example scenario to prioritize if the scope needs to narrow.
+All initial open decisions are resolved and recorded in [docs/decisions.md](docs/decisions.md):
+
+- **Name and visual identity:** Backend Ecosystem; calm, technical, beginner-friendly; request-flow diagrams that show one step at a time.
+- **Stack and hosting:** React, TypeScript, and Vite with structured local content, deployed on Vercel.
+- **Visual modes:** every visual is step-controlled (learner-driven) with a static text fallback; no autoplay animation.
+- **Sources and reviews:** official documentation or vendor blogs only; guides move `draft` → `review` → `published`, and published guides are re-reviewed when `lastReviewed` is older than six months.
+- **Scope fallback:** if scope must narrow, keep the backend-beginner audience and the place-order scenario.
 
 ## Guiding statement
 
