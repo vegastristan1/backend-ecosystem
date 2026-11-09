@@ -65,7 +65,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 ## Phase 6: Validate the first release
 
 - [x] Test the complete request journey from the home page through all starter guides.
-- [ ] Test search aliases such as "Redis," "cache," and "make repeated reads faster."
+- [x] Test search aliases such as "Redis," "cache," and "make repeated reads faster."
 - [ ] Test keyboard-only navigation and screen-reader-friendly descriptions.
 - [ ] Check links, source references, diagrams, and responsive layouts.
 - [ ] Ask representative learners to explain each starter component in their own words.
