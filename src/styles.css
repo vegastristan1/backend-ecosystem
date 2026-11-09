@@ -224,6 +224,33 @@ h1 {
   gap: 32px;
 }
 
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  margin-left: 6px;
+  color: #9aa8ab;
+  content: '/';
+}
+
+.breadcrumbs a {
+  color: var(--color-accent-dark);
+  font-weight: 650;
+}
+
+.breadcrumbs [aria-current='page'] {
+  color: var(--color-ink);
+  font-weight: 650;
+}
+
 .search-form {
   display: grid;
   gap: 8px;

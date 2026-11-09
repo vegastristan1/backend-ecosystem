@@ -1,5 +1,6 @@
 import type { Guide, GuideStatus } from '../content/types'
 import { guides } from '../content/guides'
+import { Breadcrumbs } from './Breadcrumbs'
 import { GuideVisual } from './GuideVisual'
 
 interface GuidePageProps {
@@ -50,6 +51,13 @@ export function GuidePage({ guide }: GuidePageProps) {
 
   return (
     <article className="guide-page" aria-labelledby={`${pageId}-title`}>
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '#top' },
+          { label: 'Guides', href: '#guides' },
+          { label: guide.name },
+        ]}
+      />
       <header className="guide-heading">
         <div>
           <p className="eyebrow">{formatId(guide.category)} guide</p>

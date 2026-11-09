@@ -1,4 +1,5 @@
 import type { Guide } from '../content/types'
+import { Breadcrumbs } from './Breadcrumbs'
 
 interface GuidesPageProps {
   guides: Guide[]
@@ -7,6 +8,7 @@ interface GuidesPageProps {
 export function GuidesPage({ guides }: GuidesPageProps) {
   return (
     <div className="guides-page">
+      <Breadcrumbs items={[{ label: 'Home', href: '#top' }, { label: 'Guides' }]} />
       <header className="guides-page-heading">
         <p className="eyebrow">Starter guides</p>
         <h1>Learn the parts behind the request.</h1>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { searchGuides } from '../content/search'
 import type { Guide } from '../content/types'
+import { Breadcrumbs } from './Breadcrumbs'
 
 interface SearchPageProps {
   guides: Guide[]
@@ -15,6 +16,7 @@ export function SearchPage({ guides }: SearchPageProps) {
 
   return (
     <div className="search-page">
+      <Breadcrumbs items={[{ label: 'Home', href: '#top' }, { label: 'Search' }]} />
       <header className="guides-page-heading">
         <p className="eyebrow">Search</p>
         <h1>Find a guide by tool, concept, or problem.</h1>
