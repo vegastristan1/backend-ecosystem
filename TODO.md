@@ -67,7 +67,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Test the complete request journey from the home page through all starter guides.
 - [x] Test search aliases such as "Redis," "cache," and "make repeated reads faster."
 - [x] Test keyboard-only navigation and screen-reader-friendly descriptions.
-- [ ] Check links, source references, diagrams, and responsive layouts.
+- [x] Check links, source references, diagrams, and responsive layouts.
 - [ ] Ask representative learners to explain each starter component in their own words.
 - [ ] Record where learners hesitate, misunderstand, or skip content.
 - [ ] Fix the highest-impact content and usability issues.
