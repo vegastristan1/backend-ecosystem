@@ -1,4 +1,5 @@
 import type { Guide, GuideStatus } from '../content/types'
+import { guides } from '../content/guides'
 import { GuideVisual } from './GuideVisual'
 
 interface GuidePageProps {
@@ -34,7 +35,11 @@ function ReferenceSection({ title, ids }: { title: string; ids: string[] }) {
     <section className="guide-reference" aria-label={title}>
       <h2>{title}</h2>
       <ul className="reference-list">
-        {ids.map((id) => <li key={id}>{formatId(id)}</li>)}
+        {ids.map((id) => (
+          <li key={id}>
+            {guides[id] ? <a href={`#guide/${id}`}>{formatId(id)}</a> : formatId(id)}
+          </li>
+        ))}
       </ul>
     </section>
   )
