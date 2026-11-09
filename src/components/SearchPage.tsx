@@ -6,6 +6,8 @@ interface SearchPageProps {
   guides: Guide[]
 }
 
+const exampleQueries = ['Redis', 'cache', 'make repeated reads faster']
+
 export function SearchPage({ guides }: SearchPageProps) {
   const [query, setQuery] = useState('')
   const trimmed = query.trim()
@@ -44,6 +46,33 @@ export function SearchPage({ guides }: SearchPageProps) {
               ? `No guides found for “${trimmed}”.`
               : `${results.length} ${results.length === 1 ? 'guide' : 'guides'} found for “${trimmed}”.`}
         </p>
+
+        {trimmed === '' && (
+          <div className="search-empty">
+            <p>Not sure where to start? Try one of these:</p>
+            <ul className="search-examples">
+              {exampleQueries.map((example) => (
+                <li key={example}>
+                  <button type="button" onClick={() => setQuery(example)}>
+                    {example}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {trimmed !== '' && results.length === 0 && (
+          <div className="search-no-results">
+            <p>
+              The starter set covers the reverse proxy, caching, and databases. Try a
+              related word, or browse every guide.
+            </p>
+            <a className="guide-back-link" href="#guides">
+              Browse all guides <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        )}
 
         {results.length > 0 && (
           <div className="guide-card-grid">

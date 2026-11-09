@@ -19,6 +19,29 @@ function isSearchPage(hash: string) {
   return hash === '#search'
 }
 
+function GuideNotFound({ id }: { id: string }) {
+  return (
+    <div className="search-page">
+      <header className="guides-page-heading">
+        <p className="eyebrow">Not found</p>
+        <h1>We couldn’t find that guide.</h1>
+        <p>
+          No guide matches “{id}” yet. The starter set covers the reverse proxy,
+          caching, and databases.
+        </p>
+      </header>
+      <div className="search-no-results">
+        <a className="guide-back-link" href="#guides">
+          Browse all guides <span aria-hidden="true">→</span>
+        </a>
+        <a className="guide-back-link" href="#search">
+          Search guides <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [currentHash, setCurrentHash] = useState(() => window.location.hash)
 
@@ -44,6 +67,8 @@ function App() {
         <GuidesPage guides={Object.values(guides)} />
       ) : showSearch ? (
         <SearchPage guides={Object.values(guides)} />
+      ) : guideId ? (
+        <GuideNotFound id={guideId} />
       ) : (
         <HomePage />
       )}

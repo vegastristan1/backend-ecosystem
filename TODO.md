@@ -59,7 +59,7 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Build the three starter guide pages.
 - [x] Add search by tool name, concept, and problem solved.
 - [x] Add related guides and "learn next" links.
-- [ ] Add loading, empty, error, and no-results states.
+- [x] Add loading, empty, error, and no-results states.
 - [ ] Verify the experience on mobile, tablet, and desktop layouts.
 
 ## Phase 6: Validate the first release
