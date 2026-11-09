@@ -36,6 +36,9 @@ export function AppShell({ children }: AppShellProps) {
       </main>
       <footer className="site-footer">
         <p>Understand the problems. Follow the request. Learn the system.</p>
+        <button type="button" className="back-to-top" onClick={() => window.scrollTo({ top: 0 })}>
+          Back to top <span aria-hidden="true">↑</span>
+        </button>
       </footer>
     </div>
   )
