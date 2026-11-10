@@ -70,7 +70,8 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Check links, source references, diagrams, and responsive layouts.
 - [x] Ask representative learners to explain each starter component in their own words.
   - Deferred within Phase 6: no real learners yet — Tristan's personal dry run counts. Representative learners reopen in Phase 7 with the feedback feature (Phase 7 item 2), using `docs/learner-review.md`.
-- [ ] Record where learners hesitate, misunderstand, or skip content.
+- [x] Record where learners hesitate, misunderstand, or skip content.
+  - Recorded 2026-11-09 from Tristan's personal dry run: no breadcrumbs, no back-to-top, header nav not always visible (persistent side nav wanted), color/contrast question — full dated notes in the Obsidian project note.
 - [ ] Fix the highest-impact content and usability issues.
 - [ ] Confirm the success criteria in the proposal before calling the MVP complete.
 
