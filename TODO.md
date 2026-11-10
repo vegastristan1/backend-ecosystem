@@ -74,7 +74,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - Recorded 2026-11-09 from Tristan's personal dry run: no breadcrumbs, no back-to-top, header nav not always visible (persistent side nav wanted), color/contrast question — full dated notes in the Obsidian project note.
 - [x] Fix the highest-impact content and usability issues.
   - Five fixes, one commit each: breadcrumbs `80e3d51`, back-to-top `e50c060`, sticky header + anchor offsets `a652e8d`, persistent sidebar `d54c5d2`, WCAG shade fixes `a210bb8`. Contrast audit and keyboard/SR regression both pass after the changes.
-- [ ] Confirm the success criteria in the proposal before calling the MVP complete.
+- [x] Confirm the success criteria in the proposal before calling the MVP complete.
+  - All six README success criteria confirmed by Tristan on 2026-11-09: criteria 2–6 evidenced by the Phase 6 test runs; criterion 1 (own-words explanations) confirmed via his personal dry run, with real-learner confirmation deferred to Phase 7 per item 5.
 
 ## Phase 7: Release and maintain
 
