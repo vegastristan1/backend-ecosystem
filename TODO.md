@@ -83,7 +83,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - Merged `phase-7-release-maintain` → `master` (`803f2fb`), pushed, Vercel deployed the new build. Production checks 8/8: home/journey, sidebar + sticky header, feedback section, breadcrumbs, search by problem phrase, live giscus iframe, 375px no-overflow with sidebar hidden. Live at https://backend-ecosystem.vercel.app/.
 - [x] Add a lightweight way to collect learner feedback.
   - giscus comments on every page (`FeedbackSection.tsx`): per-route threads via specific mapping (Home/Guides/Search/guide name), reactions enabled, GitHub Discussions backend. Discussions enabled on the repo; category "General". Verified 19/19 + keyboard/SR and contrast regressions green.
-- [ ] Track which guides, searches, and request-flow steps are used.
+- [x] Track which guides, searches, and request-flow steps are used.
+  - Vercel Web Analytics (cookieless, enabled in dashboard; `@vercel/analytics@2.0.1`): `<Analytics />` in `main.tsx` + custom events `page_view` (per hash route), `search` (debounced 800 ms), `guide_view`, `journey_step`. Verified 11/11 locally + journey/keyboard/contrast/feedback regressions green; production data lands after merge+push.
 - [ ] Schedule source and content reviews using `lastReviewed`.
 - [ ] Maintain a backlog for new guides, scenarios, accessibility improvements, and visual refinements.
 - [ ] Decide which later topic should be added based on observed learner needs.
