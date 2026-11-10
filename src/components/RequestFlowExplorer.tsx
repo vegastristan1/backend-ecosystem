@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { track } from '@vercel/analytics'
 import { guides } from '../content/guides'
 import type { RequestFlow } from '../content/types'
 
@@ -13,8 +14,13 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
   const isFirstStep = activeIndex === 0
   const isLastStep = activeIndex === flow.steps.length - 1
 
+  function selectStep(index: number) {
+    track('journey_step', { step: flow.steps[index].title, index: index + 1 })
+    setActiveIndex(index)
+  }
+
   function moveStep(direction: -1 | 1) {
-    setActiveIndex((currentIndex) => currentIndex + direction)
+    selectStep(activeIndex + direction)
   }
 
   return (
@@ -87,7 +93,7 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
               className={index === activeIndex ? 'journey-step-button journey-step-button--active' : 'journey-step-button'}
               type="button"
               aria-current={index === activeIndex ? 'step' : undefined}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => selectStep(index)}
             >
               <span aria-hidden="true">{String(step.order).padStart(2, '0')}</span>
               {step.title}

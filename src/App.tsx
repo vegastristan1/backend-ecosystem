@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { track } from '@vercel/analytics'
 import { AppShell } from './components/AppShell'
 import { GuidePage } from './components/GuidePage'
 import { GuidesPage } from './components/GuidesPage'
@@ -53,6 +54,20 @@ function App() {
     window.addEventListener('hashchange', handleHashChange)
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
+
+  // Hash routing: the library's automatic pageview only fires on full loads,
+  // so route changes are tracked manually with a stable route label.
+  useEffect(() => {
+    const guideId = guideIdFromHash(currentHash)
+    const route = guideId
+      ? `guide/${guideId}`
+      : isGuidesPage(currentHash)
+        ? 'guides'
+        : isSearchPage(currentHash)
+          ? 'search'
+          : 'home'
+    track('page_view', { route })
+  }, [currentHash])
 
   const guideId = guideIdFromHash(currentHash)
   const guide = guideId ? guides[guideId] : undefined

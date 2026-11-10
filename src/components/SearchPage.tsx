@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { track } from '@vercel/analytics'
 import { searchGuides } from '../content/search'
 import type { Guide } from '../content/types'
 import { Breadcrumbs } from './Breadcrumbs'
@@ -13,6 +14,15 @@ export function SearchPage({ guides }: SearchPageProps) {
   const [query, setQuery] = useState('')
   const trimmed = query.trim()
   const results = searchGuides(guides, query)
+
+  // Debounced so we record settled queries, not one event per keystroke.
+  useEffect(() => {
+    if (trimmed === '') return
+    const timer = setTimeout(() => {
+      track('search', { query: trimmed, results: results.length, hasResults: results.length > 0 })
+    }, 800)
+    return () => clearTimeout(timer)
+  }, [trimmed])
 
   return (
     <div className="search-page">

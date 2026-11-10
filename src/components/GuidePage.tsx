@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { track } from '@vercel/analytics'
 import type { Guide, GuideStatus } from '../content/types'
 import { guides } from '../content/guides'
 import { Breadcrumbs } from './Breadcrumbs'
@@ -48,6 +50,10 @@ function ReferenceSection({ title, ids }: { title: string; ids: string[] }) {
 
 export function GuidePage({ guide }: GuidePageProps) {
   const pageId = `guide-${guide.id}`
+
+  useEffect(() => {
+    track('guide_view', { guide: guide.id, name: guide.name })
+  }, [guide.id, guide.name])
 
   return (
     <article className="guide-page" aria-labelledby={`${pageId}-title`}>
