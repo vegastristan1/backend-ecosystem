@@ -89,7 +89,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - `docs/review-schedule.md` documents the approved 6-month cadence (from `docs/decisions.md`), what a review covers (content + source links), and how to record it. `npm run reviews` (`scripts/check-reviews.mjs`, zero-dep) reads `lastReviewed` from every guide registered in `src/content/guides.ts` and prints on track/OVERDUE with exit 1 when due — CI-ready. Self-checked both paths (today → on track/exit 0; `REVIEWS_TODAY=2027-05-01` → OVERDUE/exit 1).
 - [x] Maintain a backlog for new guides, scenarios, accessibility improvements, and visual refinements.
   - `docs/backlog.md`: operational queue in the four categories — guide candidates for the three unguided journey steps plus README-deferred topics, failure-path scenario, route-change focus management + reduced-motion guard (both verified gaps), step-controlled guide animation and OG social preview. Roadmap items stay in README's "Later additions" (linked, not duplicated); maintenance rule documented in the file.
-- [ ] Decide which later topic should be added based on observed learner needs.
+- [x] Decide which later topic should be added based on observed learner needs.
+  - Provisional decision recorded in `docs/decisions.md` (2026-11-10): next guide = **Client and HTTP request** (journey step 1 / curriculum step 1; assumed knowledge of all existing guides). Basis: no usage data yet (tracking not on `master`), dry run surfaced no gaps, structural dead-end observed. Revisit trigger: analytics + giscus data — revise if observed needs point elsewhere.
 - [ ] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
 
 ## Definition of done for the MVP
