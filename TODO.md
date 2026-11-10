@@ -91,7 +91,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - `docs/backlog.md`: operational queue in the four categories — guide candidates for the three unguided journey steps plus README-deferred topics, failure-path scenario, route-change focus management + reduced-motion guard (both verified gaps), step-controlled guide animation and OG social preview. Roadmap items stay in README's "Later additions" (linked, not duplicated); maintenance rule documented in the file.
 - [x] Decide which later topic should be added based on observed learner needs.
   - Provisional decision recorded in `docs/decisions.md` (2026-11-10): next guide = **Client and HTTP request** (journey step 1 / curriculum step 1; assumed knowledge of all existing guides). Basis: no usage data yet (tracking not on `master`), dry run surfaced no gaps, structural dead-end observed. Revisit trigger: analytics + giscus data — revise if observed needs point elsewhere.
-- [ ] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
+- [x] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
+  - Condition evaluated in `docs/decisions.md` (2026-11-10): not met — no giscus comments, no analytics data yet, dry run raised no questions; existing gaps are curriculum items in the backlog, not unanswered learner questions. Deferral stands; concrete re-evaluation triggers recorded (recurring unanswered giscus questions, or `search` events with `hasResults: false` clustering).
 
 ## Definition of done for the MVP
 
