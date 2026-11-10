@@ -79,7 +79,8 @@ This is the step-by-step implementation checklist for the first release. Complet
 
 ## Phase 7: Release and maintain
 
-- [ ] Publish the first release and verify the production deployment.
+- [x] Publish the first release and verify the production deployment.
+  - Merged `phase-7-release-maintain` → `master` (`803f2fb`), pushed, Vercel deployed the new build. Production checks 8/8: home/journey, sidebar + sticky header, feedback section, breadcrumbs, search by problem phrase, live giscus iframe, 375px no-overflow with sidebar hidden. Live at https://backend-ecosystem.vercel.app/.
 - [x] Add a lightweight way to collect learner feedback.
   - giscus comments on every page (`FeedbackSection.tsx`): per-route threads via specific mapping (Home/Guides/Search/guide name), reactions enabled, GitHub Discussions backend. Discussions enabled on the repo; category "General". Verified 19/19 + keyboard/SR and contrast regressions green.
 - [ ] Track which guides, searches, and request-flow steps are used.
