@@ -87,7 +87,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - Vercel Web Analytics (cookieless, enabled in dashboard; `@vercel/analytics@2.0.1`): `<Analytics />` in `main.tsx` + custom events `page_view` (per hash route), `search` (debounced 800 ms), `guide_view`, `journey_step`. Verified 11/11 locally + journey/keyboard/contrast/feedback regressions green; production data lands after merge+push.
 - [x] Schedule source and content reviews using `lastReviewed`.
   - `docs/review-schedule.md` documents the approved 6-month cadence (from `docs/decisions.md`), what a review covers (content + source links), and how to record it. `npm run reviews` (`scripts/check-reviews.mjs`, zero-dep) reads `lastReviewed` from every guide registered in `src/content/guides.ts` and prints on track/OVERDUE with exit 1 when due — CI-ready. Self-checked both paths (today → on track/exit 0; `REVIEWS_TODAY=2027-05-01` → OVERDUE/exit 1).
-- [ ] Maintain a backlog for new guides, scenarios, accessibility improvements, and visual refinements.
+- [x] Maintain a backlog for new guides, scenarios, accessibility improvements, and visual refinements.
+  - `docs/backlog.md`: operational queue in the four categories — guide candidates for the three unguided journey steps plus README-deferred topics, failure-path scenario, route-change focus management + reduced-motion guard (both verified gaps), step-controlled guide animation and OG social preview. Roadmap items stay in README's "Later additions" (linked, not duplicated); maintenance rule documented in the file.
 - [ ] Decide which later topic should be added based on observed learner needs.
 - [ ] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
 
