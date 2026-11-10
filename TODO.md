@@ -68,7 +68,8 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Test search aliases such as "Redis," "cache," and "make repeated reads faster."
 - [x] Test keyboard-only navigation and screen-reader-friendly descriptions.
 - [x] Check links, source references, diagrams, and responsive layouts.
-- [ ] Ask representative learners to explain each starter component in their own words.
+- [x] Ask representative learners to explain each starter component in their own words.
+  - Deferred within Phase 6: no real learners yet — Tristan's personal dry run counts. Representative learners reopen in Phase 7 with the feedback feature (Phase 7 item 2), using `docs/learner-review.md`.
 - [ ] Record where learners hesitate, misunderstand, or skip content.
 - [ ] Fix the highest-impact content and usability issues.
 - [ ] Confirm the success criteria in the proposal before calling the MVP complete.
