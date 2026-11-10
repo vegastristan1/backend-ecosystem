@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { FeedbackSection } from './FeedbackSection'
 import { Sidebar } from './Sidebar'
 
 interface AppShellProps {
@@ -36,6 +37,7 @@ export function AppShell({ children }: AppShellProps) {
         <Sidebar />
         <main className="main-content" id="main-content" tabIndex={-1}>
           {children}
+          <FeedbackSection />
         </main>
       </div>
       <footer className="site-footer">
