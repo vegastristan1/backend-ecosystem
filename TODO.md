@@ -80,7 +80,8 @@ This is the step-by-step implementation checklist for the first release. Complet
 ## Phase 7: Release and maintain
 
 - [ ] Publish the first release and verify the production deployment.
-- [ ] Add a lightweight way to collect learner feedback.
+- [x] Add a lightweight way to collect learner feedback.
+  - giscus comments on every page (`FeedbackSection.tsx`): per-route threads via specific mapping (Home/Guides/Search/guide name), reactions enabled, GitHub Discussions backend. Discussions enabled on the repo; category "General". Verified 19/19 + keyboard/SR and contrast regressions green.
 - [ ] Track which guides, searches, and request-flow steps are used.
 - [ ] Schedule source and content reviews using `lastReviewed`.
 - [ ] Maintain a backlog for new guides, scenarios, accessibility improvements, and visual refinements.
