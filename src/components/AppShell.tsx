@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Sidebar } from './Sidebar'
 
 interface AppShellProps {
   children: ReactNode
@@ -31,9 +32,12 @@ export function AppShell({ children }: AppShellProps) {
           </ul>
         </nav>
       </header>
-      <main className="main-content" id="main-content" tabIndex={-1}>
-        {children}
-      </main>
+      <div className="app-body">
+        <Sidebar />
+        <main className="main-content" id="main-content" tabIndex={-1}>
+          {children}
+        </main>
+      </div>
       <footer className="site-footer">
         <p>Understand the problems. Follow the request. Learn the system.</p>
         <button type="button" className="back-to-top" onClick={() => window.scrollTo({ top: 0 })}>
