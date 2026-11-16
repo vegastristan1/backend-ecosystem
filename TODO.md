@@ -106,6 +106,17 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Remove the shipped item from the backlog and mark the decision shipped.
   - Backlog "New guides" list now starts at backend application; `docs/decisions.md` 2026-11-10 entry annotated as shipped.
 
+## Phase 9: Backend application and API guide
+
+- [x] Draft the Backend application and API guide (journey step 3 / README curriculum step 5).
+  - `src/content/backendApplicationGuide.ts`: route matching, validation, business rules, data coordination, response; 4 official sources verified live (HTTP 200, Django 404 candidate dropped) and dated 2026-11-17; `status: 'review'` consistent with the other guides.
+- [x] Register the guide and link it from journey step 3.
+  - Added to `src/content/guides.ts`; `guideId: 'backend-application'` on step 3 of `requestFlow.ts`. The reverse-proxy learn-next and the caching/database prerequisites now resolve to real links instead of plain text.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green; `npm run reviews` shows 5/5 guides on track (new guide next due 2027-05-17); searchable fields contain no "cache"/"redis"/"nginx"/"repeated reads" tokens, and the "route browser requests" query still fails the new guide on browser/requests.
+- [x] Update the documents that reference the guide set.
+  - `README.md` MVP list (was stale since Phase 8: three → five guides), `docs/learning-journey.md` deep-dives paragraph (same staleness), `docs/backlog.md` (item shipped; one unguided step left, 5 guides), `docs/decisions.md` new 2026-11-17 section recording the Phase 9 pick.
+
 ## Definition of done for the MVP
 
 - [x] A learner can start at the home page and complete one end-to-end request journey.
