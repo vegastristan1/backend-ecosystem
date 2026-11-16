@@ -1,3 +1,4 @@
+import { backendApplicationGuide } from './backendApplicationGuide'
 import { cachingGuide } from './cachingGuide'
 import { clientHttpGuide } from './clientHttpGuide'
 import { databaseGuide } from './databaseGuide'
@@ -7,6 +8,7 @@ import type { Guide } from './types'
 export const guides: Record<string, Guide> = {
   [clientHttpGuide.id]: clientHttpGuide,
   [reverseProxyGuide.id]: reverseProxyGuide,
+  [backendApplicationGuide.id]: backendApplicationGuide,
   [cachingGuide.id]: cachingGuide,
   [databaseGuide.id]: databaseGuide,
 }
