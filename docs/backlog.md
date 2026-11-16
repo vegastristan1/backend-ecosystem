@@ -16,11 +16,6 @@ All six journey steps have a deep dive; the curriculum defines 20 topics for 6 g
 - Failure-path place-order scenario: the same journey when the cache or database fails — the current request flow shows the success path only.
 - More example architectures and request scenarios (README "Later additions").
 
-## Accessibility
-
-- Focus management on hash-route changes: SPA navigation currently leaves focus wherever it was, so screen-reader learners get no cue that the page changed — move focus to the new page's heading and announce the route.
-- Honor `prefers-reduced-motion` for the remaining 160 ms transitions; decisions.md already promises instant swaps for reduced-motion users.
-
 ## Visual refinements
 
 - Step-controlled animation for guide-page diagrams (README "Later additions" and decisions.md; the request flow is already step-controlled and guide diagrams keep static fallbacks).
