@@ -6,9 +6,8 @@ Living queue of work outside the current scope. Roadmap-level items (knowledge c
 
 ## New guides
 
-One of the six journey steps has no deep dive (response), and the curriculum defines 20 topics for 5 guides.
+All six journey steps have a deep dive; the curriculum defines 20 topics for 6 guides.
 
-- Response, errors, and API contracts — journey step 6; failure behavior (README curriculum step 13).
 - Authentication and authorization (README curriculum step 7; auth guides deferred in README).
 - Background jobs and message queues (README curriculum step 12; grouped after the response in decisions.md).
 
