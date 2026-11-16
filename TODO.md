@@ -95,6 +95,17 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
   - Condition evaluated in `docs/decisions.md` (2026-11-10): not met — no giscus comments, no analytics data yet, dry run raised no questions; existing gaps are curriculum items in the backlog, not unanswered learner questions. Deferral stands; concrete re-evaluation triggers recorded (recurring unanswered giscus questions, or `search` events with `hasResults: false` clustering).
 
+## Phase 8: Client and HTTP request guide
+
+- [x] Draft the Client and HTTP request guide (journey step 1 / README curriculum step 1).
+  - `src/content/clientHttpGuide.ts`: methods, headers, status codes, JSON, request/response cycle; 5 MDN sources verified live (HTTP 200) and dated 2026-11-16.
+- [x] Register the guide and link it from journey step 1.
+  - Added to `src/content/guides.ts` (flows automatically into sidebar, guides page, search, feedback terms); `guideId: 'client-http'` on step 1 of `requestFlow.ts` — removes the step-1 structural dead-end. `reverseProxyGuide.prerequisites: ['client-http']` now resolves to a link automatically.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green; `npm run reviews` shows 4/4 guides on track (new guide next due 2027-05-16); new guide's searchable fields contain no "cache"/"redis"/"repeated reads" tokens, so existing search tests are unaffected.
+- [x] Remove the shipped item from the backlog and mark the decision shipped.
+  - Backlog "New guides" list now starts at backend application; `docs/decisions.md` 2026-11-10 entry annotated as shipped.
+
 ## Definition of done for the MVP
 
 - [x] A learner can start at the home page and complete one end-to-end request journey.
