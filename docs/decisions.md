@@ -99,3 +99,4 @@ The three starter guides are the first detailed guides, not the entire beginner 
 ### 2026-11-17
 
 - Next guide topic (Phase 9): **Backend application and API** — structural basis again, same terms as the Phase 7 decision: journey step 3 / curriculum step 5 has no deep dive, and the reverse proxy, caching, and database guides already reference `backend-application` as a prerequisite or learn-next, so the guide turns three plain-text references into links. The usage-data revisit trigger from the 2026-11-10 decision stands unchanged. Shipped as the Phase 9 guide on 2026-11-17.
+- Next guide topic (Phase 10): **Response, errors, and API contracts** — structural basis again: journey step 6 / curriculum step 13 was the last unguided journey step, so this guide completes deep-dive coverage of the whole place-order journey. The usage-data revisit trigger stands unchanged. Shipped as the Phase 10 guide on 2026-11-17.
