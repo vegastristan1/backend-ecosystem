@@ -33,7 +33,7 @@ Supporting infrastructure is introduced around this path: containers and deploym
 | Containers and runtime packaging | Backend application basics | Deployment, cloud hosting | Deployment and CI/CD |
 | Observability and operations | A running application and basic deployment | Reliability, monitoring, debugging | Reliability and security practices |
 
-The three MVP deep dives are Reverse proxy / NGINX, Cache / Redis, and Database. Foundation topics are short journey steps with links into those deep dives where appropriate. Every guide should expose its prerequisites, two or three related guides, and one recommended next topic so learners always have a clear continuation.
+The deep dives so far are Client and HTTP request, Reverse proxy / NGINX, Backend application and API, Cache / Redis, and Database; the Response and API contracts step is still uncovered. Foundation topics are short journey steps with links into those deep dives where appropriate. Every guide should expose its prerequisites, two or three related guides, and one recommended next topic so learners always have a clear continuation.
 
 ## Concept-before-product rule
 
