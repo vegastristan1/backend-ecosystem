@@ -1182,3 +1182,15 @@ h1 {
 .navigation-item a:hover {
   color: var(--color-accent-dark);
 }
+
+/* Honor the OS reduced-motion setting: transitions become instant swaps,
+   as promised in docs/decisions.md. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

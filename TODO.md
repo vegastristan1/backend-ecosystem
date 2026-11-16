@@ -128,6 +128,18 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Update the documents that reference the guide set.
   - `README.md` MVP list now names all six journey-step guides, `docs/learning-journey.md` deep-dives paragraph states full coverage, `docs/backlog.md` (all six steps covered; 6 guides — auth and message-queue candidates remain), `docs/decisions.md` Phase 10 pick recorded under 2026-11-17.
 
+## Phase 11: Accessibility — route focus and reduced motion
+
+- [x] Move focus to the new page's heading on route changes.
+  - `App.tsx`: route label derived once in the component; an effect focuses `main h1` (inline `tabIndex=-1`) when the route actually changes. First run skipped so page load does not steal focus; same-route hash changes (in-page anchors like `#journey-preview`) do not refire it.
+- [x] Fix the skip link so it no longer routes home — bug found during this phase, filed as [#4](https://github.com/vegastristan1/backend-ecosystem/issues/4).
+  - `AppShell.tsx`: `onClick` calls `preventDefault()` and focuses `#main-content` directly; the URL no longer changes, root cause fixed once in the shared shell (skip links should never mutate the hash).
+- [x] Honor `prefers-reduced-motion` for the remaining 160 ms transitions.
+  - `styles.css`: a `prefers-reduced-motion: reduce` block zeroes transition/animation durations and forces instant scrolling — covers the journey-chip rule (the only transition in the file) and any future ones, as promised in `docs/decisions.md`.
+- [x] Verify the build.
+  - `npm run build` green (tsc + vite).
+- [ ] Browser-check the three behaviors at the gate (skip link stays on page · route change announces the heading · reduced-motion swaps are instant).
+
 ## Definition of done for the MVP
 
 - [x] A learner can start at the home page and complete one end-to-end request journey.

@@ -1,9 +1,16 @@
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 import { FeedbackSection } from './FeedbackSection'
 import { Sidebar } from './Sidebar'
 
 interface AppShellProps {
   children: ReactNode
+}
+
+// Skip links must not change the hash: an unknown hash routes to the home
+// page (issue #4), and a focus-only action should not touch the URL.
+function handleSkipToContent(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+  document.getElementById('main-content')?.focus()
 }
 
 const navigationItems = [
@@ -15,7 +22,7 @@ const navigationItems = [
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className="app-shell" id="top">
-      <a className="skip-link" href="#main-content">
+      <a className="skip-link" href="#main-content" onClick={handleSkipToContent}>
         Skip to content
       </a>
       <header className="site-header">

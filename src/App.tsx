@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { track } from '@vercel/analytics'
 import { AppShell } from './components/AppShell'
 import { GuidePage } from './components/GuidePage'
@@ -55,24 +55,38 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
-  // Hash routing: the library's automatic pageview only fires on full loads,
-  // so route changes are tracked manually with a stable route label.
-  useEffect(() => {
-    const guideId = guideIdFromHash(currentHash)
-    const route = guideId
-      ? `guide/${guideId}`
-      : isGuidesPage(currentHash)
-        ? 'guides'
-        : isSearchPage(currentHash)
-          ? 'search'
-          : 'home'
-    track('page_view', { route })
-  }, [currentHash])
-
   const guideId = guideIdFromHash(currentHash)
   const guide = guideId ? guides[guideId] : undefined
   const showGuides = isGuidesPage(currentHash)
   const showSearch = isSearchPage(currentHash)
+  const route = guideId
+    ? `guide/${guideId}`
+    : showGuides
+      ? 'guides'
+      : showSearch
+        ? 'search'
+        : 'home'
+
+  // Hash routing: the library's automatic pageview only fires on full loads,
+  // so route changes are tracked manually with a stable route label.
+  useEffect(() => {
+    track('page_view', { route })
+  }, [currentHash, route])
+
+  // Screen-reader cue for route changes: move focus to the new page's heading
+  // so the page change is announced. Skips the first run so page load does not
+  // steal focus, and skips same-route hash changes (in-page anchors).
+  const previousRoute = useRef<string | null>(null)
+  useEffect(() => {
+    if (previousRoute.current !== null && previousRoute.current !== route) {
+      const heading = document.querySelector<HTMLElement>('main h1')
+      if (heading) {
+        heading.tabIndex = -1
+        heading.focus()
+      }
+    }
+    previousRoute.current = route
+  }, [route])
 
   return (
     <AppShell>
