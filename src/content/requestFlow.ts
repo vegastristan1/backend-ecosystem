@@ -31,6 +31,7 @@ export const orderRequestFlow: RequestFlow = {
       componentId: 'backend-application',
       explanation: 'Application code validates the request and applies the order rules.',
       visualState: 'business-logic',
+      guideId: 'backend-application',
     },
     {
       id: 'cache',
