@@ -123,7 +123,7 @@ Learners should be able to search by tool name, concept, or problem—for exampl
 
 - A home page introducing the request journey.
 - One end-to-end example flow, such as placing an order.
-- Five polished guides: **Client and HTTP request**, **NGINX / reverse proxy**, **Backend application and API**, **caching / Redis**, and **databases**.
+- A polished guide for every step of the request journey: **Client and HTTP request**, **NGINX / reverse proxy**, **Backend application and API**, **caching / Redis**, **databases**, and **Response, errors, and API contracts**.
 - Interactive or step-by-step visuals for request routing, cache hits and misses, and database reads and writes.
 - Search across the initial guide set.
 - Related concepts, alternatives, and “learn next” links.
