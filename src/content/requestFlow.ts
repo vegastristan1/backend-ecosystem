@@ -13,6 +13,7 @@ export const orderRequestFlow: RequestFlow = {
       componentId: 'client',
       explanation: 'The browser sends an HTTP request describing the order action.',
       visualState: 'request-created',
+      guideId: 'client-http',
     },
     {
       id: 'reverse-proxy',
