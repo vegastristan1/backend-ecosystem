@@ -117,6 +117,17 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Update the documents that reference the guide set.
   - `README.md` MVP list (was stale since Phase 8: three → five guides), `docs/learning-journey.md` deep-dives paragraph (same staleness), `docs/backlog.md` (item shipped; one unguided step left, 5 guides), `docs/decisions.md` new 2026-11-17 section recording the Phase 9 pick.
 
+## Phase 10: Response, errors, and API contracts guide
+
+- [x] Draft the Response, errors, and API contracts guide (journey step 6 / README curriculum step 13).
+  - `src/content/responseGuide.ts`: status-code selection, JSON success/error bodies, response headers, 4xx/5xx failure paths; 5 sources verified live (HTTP 200 — MDN status codes/headers/JSON, RFC 9110, OpenAPI specification) and dated 2026-11-17; `status: 'review'` consistent with the other guides. One `title` colon typo caught by `tsc` and fixed before commit.
+- [x] Register the guide and link it from journey step 6.
+  - Added to `src/content/guides.ts`; `guideId: 'response'` on step 6 of `requestFlow.ts`. Every journey step now links to its guide — no "coming later" notes remain in the flow.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green; `npm run reviews` shows 6/6 guides on track (new guide next due 2027-05-17); searchable fields contain no "cache"/"redis"/"nginx"/"repeated reads"/"database" tokens.
+- [x] Update the documents that reference the guide set.
+  - `README.md` MVP list now names all six journey-step guides, `docs/learning-journey.md` deep-dives paragraph states full coverage, `docs/backlog.md` (all six steps covered; 6 guides — auth and message-queue candidates remain), `docs/decisions.md` Phase 10 pick recorded under 2026-11-17.
+
 ## Definition of done for the MVP
 
 - [x] A learner can start at the home page and complete one end-to-end request journey.

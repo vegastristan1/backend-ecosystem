@@ -58,6 +58,7 @@ export const orderRequestFlow: RequestFlow = {
       componentId: 'response',
       explanation: 'The backend returns a success or failure response to the browser.',
       visualState: 'response-returned',
+      guideId: 'response',
     },
   ],
 }
