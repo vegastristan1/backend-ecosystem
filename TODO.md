@@ -138,7 +138,8 @@ This is the step-by-step implementation checklist for the first release. Complet
   - `styles.css`: a `prefers-reduced-motion: reduce` block zeroes transition/animation durations and forces instant scrolling — covers the journey-chip rule (the only transition in the file) and any future ones, as promised in `docs/decisions.md`.
 - [x] Verify the build.
   - `npm run build` green (tsc + vite).
-- [ ] Browser-check the three behaviors at the gate (skip link stays on page · route change announces the heading · reduced-motion swaps are instant).
+- [x] Browser-check the three behaviors at the gate (skip link stays on page · route change announces the heading · reduced-motion swaps are instant).
+  - Tristan approved the gate on 2026-11-17; production bundle verified serving the skip-link handler and `prefers-reduced-motion` CSS.
 
 ## Definition of done for the MVP
 
