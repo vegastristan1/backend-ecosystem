@@ -83,7 +83,7 @@ This is the step-by-step implementation checklist for the first release. Complet
   - Merged `phase-7-release-maintain` → `master` (`803f2fb`), pushed, Vercel deployed the new build. Production checks 8/8: home/journey, sidebar + sticky header, feedback section, breadcrumbs, search by problem phrase, live giscus iframe, 375px no-overflow with sidebar hidden. Live at https://backend-ecosystem.vercel.app/.
 - [x] Add a lightweight way to collect learner feedback.
   - giscus comments on every page (`FeedbackSection.tsx`): per-route threads via specific mapping (Home/Guides/Search/guide name), reactions enabled, GitHub Discussions backend. Discussions enabled on the repo; category "General". Verified 19/19 + keyboard/SR and contrast regressions green.
-  - ⚠️ Known defect: the giscus GitHub App is not installed on the repo, so the widget errors for all visitors (iframe loads, comment UI does not). Tracked in [#2](https://github.com/vegastristan1/backend-ecosystem/issues/2); app install deferred by Tristan.
+  - Resolved 2026-11-16: giscus GitHub App installed on the repo; end-to-end check passed (comment via live site landed in Discussions → General → Home). [#2](https://github.com/vegastristan1/backend-ecosystem/issues/2) closed.
 - [x] Track which guides, searches, and request-flow steps are used.
   - Vercel Web Analytics (cookieless, enabled in dashboard; `@vercel/analytics@2.0.1`): `<Analytics />` in `main.tsx` + custom events `page_view` (per hash route), `search` (debounced 800 ms), `guide_view`, `journey_step`. Verified 11/11 locally + journey/keyboard/contrast/feedback regressions green; production data lands after merge+push.
 - [x] Schedule source and content reviews using `lastReviewed`.
@@ -95,11 +95,22 @@ This is the step-by-step implementation checklist for the first release. Complet
 - [x] Re-evaluate the AI assistant only after the content and feedback show a specific gap.
   - Condition evaluated in `docs/decisions.md` (2026-11-10): not met — no giscus comments, no analytics data yet, dry run raised no questions; existing gaps are curriculum items in the backlog, not unanswered learner questions. Deferral stands; concrete re-evaluation triggers recorded (recurring unanswered giscus questions, or `search` events with `hasResults: false` clustering).
 
+## Phase 8: Client and HTTP request guide
+
+- [x] Draft the Client and HTTP request guide (journey step 1 / README curriculum step 1).
+  - `src/content/clientHttpGuide.ts`: methods, headers, status codes, JSON, request/response cycle; 5 MDN sources verified live (HTTP 200) and dated 2026-11-16.
+- [x] Register the guide and link it from journey step 1.
+  - Added to `src/content/guides.ts` (flows automatically into sidebar, guides page, search, feedback terms); `guideId: 'client-http'` on step 1 of `requestFlow.ts` — removes the step-1 structural dead-end. `reverseProxyGuide.prerequisites: ['client-http']` now resolves to a link automatically.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green; `npm run reviews` shows 4/4 guides on track (new guide next due 2027-05-16); new guide's searchable fields contain no "cache"/"redis"/"repeated reads" tokens, so existing search tests are unaffected.
+- [x] Remove the shipped item from the backlog and mark the decision shipped.
+  - Backlog "New guides" list now starts at backend application; `docs/decisions.md` 2026-11-10 entry annotated as shipped.
+
 ## Definition of done for the MVP
 
-- [ ] A learner can start at the home page and complete one end-to-end request journey.
-- [ ] The three starter guides are published, linked, sourced, and reviewed.
-- [ ] Search finds guides by tool, concept, and problem.
-- [ ] Every visual has an accessible text explanation and a usable fallback.
-- [ ] The application works on mobile and desktop.
-- [ ] The success criteria can be demonstrated with a small learner review.
+- [x] A learner can start at the home page and complete one end-to-end request journey.
+- [x] The three starter guides are published, linked, sourced, and reviewed.
+- [x] Search finds guides by tool, concept, and problem.
+- [x] Every visual has an accessible text explanation and a usable fallback.
+- [x] The application works on mobile and desktop.
+- [x] The success criteria can be demonstrated with a small learner review.

@@ -6,9 +6,8 @@ Living queue of work outside the current scope. Roadmap-level items (knowledge c
 
 ## New guides
 
-Three of the six journey steps have no deep dive yet (client/request, backend application, response), and the curriculum defines 20 topics for 3 guides.
+Two of the six journey steps have no deep dive yet (backend application, response), and the curriculum defines 20 topics for 4 guides.
 
-- Client and HTTP request — journey step 1; methods, headers, status codes (README curriculum step 1).
 - Backend application and API — journey step 3; routing and business logic (README curriculum step 5).
 - Response, errors, and API contracts — journey step 6; failure behavior (README curriculum step 13).
 - Authentication and authorization (README curriculum step 7; auth guides deferred in README).
