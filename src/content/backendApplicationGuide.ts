@@ -110,7 +110,7 @@ export const backendApplicationGuide: Guide = {
   ],
   prerequisites: ['client-http'],
   relatedGuides: ['reverse-proxy', 'caching', 'database'],
-  learnNext: ['caching', 'database'],
+  learnNext: ['caching', 'database', 'auth'],
   aliases: [
     'backend',
     'api',

@@ -156,10 +156,14 @@ Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" p
 
 ## Phase 13: Authentication and authorization guide
 
-- [ ] Draft the Authentication and authorization guide (README curriculum step 7).
-- [ ] Register the guide and link it from the related guides (prerequisites / learn-next — auth has no journey step of its own).
-- [ ] Verify build, review schedule, and search regressions.
-- [ ] Update the documents that reference the guide set (`README.md`, `docs/learning-journey.md`, `docs/backlog.md`, `docs/decisions.md`).
+- [x] Draft the Authentication and authorization guide (README curriculum step 7).
+  - `src/content/authGuide.ts`: authn vs authz, session cookie vs signed token, 401 vs 403, issue/refresh/revoke; 5 sources verified live (HTTP 200 — MDN HTTP authentication, RFC 6265 cookies, RFC 6749 OAuth 2.0, RFC 7519 JWT, OpenID Connect Core 1.0) and dated 2026-11-18; `status: 'review'` consistent with the other guides.
+- [x] Register the guide and link it from the related guides (prerequisites / learn-next — auth has no journey step of its own).
+  - Added to `src/content/guides.ts` (sidebar, guides page, search, feedback terms pick it up); `backend-application` learn-next adds `auth`, `response` related-guides adds `auth`; auth's prerequisites are client-http + backend-application.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green (tsc + vite); `npm run reviews` shows 7/7 guides on track (new guide next due 2027-05-18); bundled search check ALL PASS — the 7 regression queries (`redis`, `cache`, `make repeated reads faster`, `nginx`, `database`, `route browser requests`, nonsense) return identical results without the new guide, and `jwt`/`login`/`401`/`sessions` find it.
+- [x] Update the documents that reference the guide set.
+  - `README.md` "Later additions" (authentication removed — shipped), `docs/learning-journey.md` deep-dives paragraph (auth deep dive noted), `docs/backlog.md` (item shipped; message queues remain), `docs/decisions.md` Phase 13 pick recorded under 2026-11-18.
 
 ## Phase 14: Background jobs and message queues guide
 

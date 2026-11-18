@@ -131,7 +131,7 @@ Learners should be able to search by tool name, concept, or problem—for exampl
 
 ### Later additions
 
-- Guides for authentication, message queues, containers, Kubernetes, cloud platforms, CI/CD, and monitoring.
+- Guides for message queues, containers, Kubernetes, cloud platforms, CI/CD, and monitoring.
 - More example architectures and request scenarios.
 - Knowledge checks, exercises, and saved learning progress.
 - Side-by-side comparisons and guided technology recommendations.
