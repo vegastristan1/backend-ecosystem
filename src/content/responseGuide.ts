@@ -109,7 +109,7 @@ export const responseGuide: Guide = {
     'GraphQL’s single-errors array instead of per-field HTTP statuses',
   ],
   prerequisites: ['client-http', 'backend-application'],
-  relatedGuides: ['backend-application', 'reverse-proxy'],
+  relatedGuides: ['backend-application', 'reverse-proxy', 'auth'],
   learnNext: ['testing'],
   aliases: [
     'response',
