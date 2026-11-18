@@ -100,3 +100,7 @@ The three starter guides are the first detailed guides, not the entire beginner 
 
 - Next guide topic (Phase 9): **Backend application and API** — structural basis again, same terms as the Phase 7 decision: journey step 3 / curriculum step 5 has no deep dive, and the reverse proxy, caching, and database guides already reference `backend-application` as a prerequisite or learn-next, so the guide turns three plain-text references into links. The usage-data revisit trigger from the 2026-11-10 decision stands unchanged. Shipped as the Phase 9 guide on 2026-11-17.
 - Next guide topic (Phase 10): **Response, errors, and API contracts** — structural basis again: journey step 6 / curriculum step 13 was the last unguided journey step, so this guide completes deep-dive coverage of the whole place-order journey. The usage-data revisit trigger stands unchanged. Shipped as the Phase 10 guide on 2026-11-17.
+
+### 2026-11-18
+
+- Roadmap promoted into TODO: operational backlog items became Phases 12–17 — Phase 12 is the usage-data decision gate (the standing revisit trigger from 2026-11-10, now actionable since analytics and giscus are live), Phases 13–14 are the auth and message-queue guides, Phase 15 the failure-path scenario, Phase 16 the visual refinements (step-controlled guide animation, OG image), and Phase 17 an unscheduled placeholder for the next content wave. README delivery stages updated to match; promoted items removed from `docs/backlog.md`.

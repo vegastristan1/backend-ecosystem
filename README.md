@@ -199,11 +199,15 @@ The Vercel project uses the repository root (`./`), the Vite framework preset, `
 
 ## Suggested delivery stages
 
-1. **Define the learning journey:** complete Phases 0–1 in [TODO.md](TODO.md).
-2. **Create the content:** complete Phases 2–3 in [TODO.md](TODO.md).
-3. **Build the guide experience:** complete Phases 4–5 in [TODO.md](TODO.md).
-4. **Review with learners:** complete Phase 6 in [TODO.md](TODO.md).
-5. **Release and expand deliberately:** complete Phase 7 in [TODO.md](TODO.md).
+Status as of 2026-11-18 — full phase list and checkboxes live in [TODO.md](TODO.md):
+
+1. **Define the learning journey:** Phases 0–1 — done.
+2. **Create the content:** Phases 2–3 — done.
+3. **Build the guide experience:** Phases 4–5 — done.
+4. **Review with learners:** Phase 6 — done.
+5. **Release and expand deliberately:** Phase 7 — released; Phases 8–10 added a guide per journey step; Phase 11 finished accessibility hardening.
+6. **Grow from observed needs:** Phases 12–16 — next: review analytics/giscus, then auth and message-queue guides, the failure-path scenario, and visual refinements.
+7. **Later content waves:** Phase 17 placeholder (containers, cloud, CI/CD, monitoring guides) — unscheduled.
 
 ## Decisions
 

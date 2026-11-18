@@ -2,6 +2,8 @@
 
 This is the step-by-step implementation checklist for the first release. Complete each phase in order, but revisit earlier tasks when user feedback or technical discoveries require it.
 
+Phases 0–11 are shipped (MVP released and maintained). Phases 12–17 are the roadmap promoted from `docs/backlog.md` on 2026-11-18: 12–16 are scheduled work, 17 is an unscheduled placeholder for later content waves.
+
 ## Phase 0: Confirm the foundation
 
 - [x] Choose the project name and basic visual direction.
@@ -140,6 +142,47 @@ This is the step-by-step implementation checklist for the first release. Complet
   - `npm run build` green (tsc + vite).
 - [x] Browser-check the three behaviors at the gate (skip link stays on page · route change announces the heading · reduced-motion swaps are instant).
   - Tristan approved the gate on 2026-11-17; production bundle verified serving the skip-link handler and `prefers-reduced-motion` CSS.
+
+## Phase 12: Review learner data and pick the next guide
+
+Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" pick has a usage-data revisit trigger — analytics and giscus are live in production, so observed needs decide before structural picks.
+
+- [ ] Review Vercel analytics (search, page_view, guide_view, journey_step) and giscus comments for observed learner needs.
+- [ ] Confirm or revise the next-guide pick (structural default: Authentication and authorization) and record it in `docs/decisions.md`.
+- [ ] Reorder Phases 13–14 if the data points elsewhere.
+
+## Phase 13: Authentication and authorization guide
+
+- [ ] Draft the Authentication and authorization guide (README curriculum step 7).
+- [ ] Register the guide and link it from the related guides (prerequisites / learn-next — auth has no journey step of its own).
+- [ ] Verify build, review schedule, and search regressions.
+- [ ] Update the documents that reference the guide set (`README.md`, `docs/learning-journey.md`, `docs/backlog.md`, `docs/decisions.md`).
+
+## Phase 14: Background jobs and message queues guide
+
+- [ ] Draft the Background jobs and message queues guide (README curriculum step 12).
+- [ ] Register the guide and link it from the related guides (prerequisites / learn-next).
+- [ ] Verify build, review schedule, and search regressions.
+- [ ] Update the documents that reference the guide set.
+
+## Phase 15: Failure-path place-order scenario
+
+- [ ] Design the failure-path journey (cache or database fails mid-request — what each step does and what the client sees).
+- [ ] Implement the failure variant of the request flow alongside the existing success path.
+- [ ] Add accessible text alternatives and keep the no-autoplay / reduced-motion rules.
+- [ ] Test the failure journey end-to-end (build, keyboard, responsive, search unaffected).
+
+## Phase 16: Visual refinements
+
+- [ ] Step-controlled animation for guide-page diagrams (no autoplay; static text fallback preserved; `prefers-reduced-motion` swaps stay instant).
+- [ ] Open Graph social preview image (`og:image` in `index.html`) so shared links show a preview.
+- [ ] Verify the build and accessibility regressions.
+
+## Phase 17: Next content wave (roadmap, unscheduled)
+
+Placeholder so the roadmap lives in one file — details defined when scheduled into a real phase.
+
+- [ ] Schedule the next batch from README "Later additions": containers, cloud hosting, CI/CD, and monitoring guides, plus more example architectures and request scenarios.
 
 ## Definition of done for the MVP
 

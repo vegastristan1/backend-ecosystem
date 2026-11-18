@@ -4,19 +4,16 @@ Living queue of work outside the current scope. Roadmap-level items (knowledge c
 
 **Maintenance:** append an item during any phase with a short source note; promote it into a TODO phase when it is scheduled; delete it once shipped.
 
+Promoted 2026-11-18 into TODO Phases 12–17: authentication guide, message-queue guide, failure-path scenario, step-controlled guide animation, OG social preview, and the next content wave (README "Later additions"). What remains below is unprioritized overflow.
+
 ## New guides
 
-All six journey steps have a deep dive; the curriculum defines 20 topics for 6 guides.
-
-- Authentication and authorization (README curriculum step 7; auth guides deferred in README).
-- Background jobs and message queues (README curriculum step 12; grouped after the response in decisions.md).
+- (none queued — both candidates promoted to TODO Phases 13–14)
 
 ## New scenarios
 
-- Failure-path place-order scenario: the same journey when the cache or database fails — the current request flow shows the success path only.
-- More example architectures and request scenarios (README "Later additions").
+- (none queued — promoted to TODO Phase 17)
 
 ## Visual refinements
 
-- Step-controlled animation for guide-page diagrams (README "Later additions" and decisions.md; the request flow is already step-controlled and guide diagrams keep static fallbacks).
-- Open Graph social preview image: `index.html` has a title and description but no `og:image`, so shared links show no preview.
+- (none queued — both items promoted to TODO Phase 16)
