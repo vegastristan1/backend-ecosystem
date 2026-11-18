@@ -147,9 +147,12 @@ Phases 0–11 are shipped (MVP released and maintained). Phases 12–17 are the 
 
 Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" pick has a usage-data revisit trigger — analytics and giscus are live in production, so observed needs decide before structural picks.
 
-- [ ] Review Vercel analytics (search, page_view, guide_view, journey_step) and giscus comments for observed learner needs.
-- [ ] Confirm or revise the next-guide pick (structural default: Authentication and authorization) and record it in `docs/decisions.md`.
-- [ ] Reorder Phases 13–14 if the data points elsewhere.
+- [x] Review Vercel analytics (search, page_view, guide_view, journey_step) and giscus comments for observed learner needs.
+  - Giscus: 1 discussion, 1 comment — Tristan's own test (2026-11-10), reactions on test thread; zero learner feedback. Vercel aggregate (30d): 16 visitors / 17 views / 94% bounce, all on `/`, referrers bing 1 / github 1. Custom events sent but Events panel is Pro-only on Hobby — event-level review impossible; filed [#5](https://github.com/vegastristan1/backend-ecosystem/issues/5).
+- [x] Confirm or revise the next-guide pick (structural default: Authentication and authorization) and record it in `docs/decisions.md`.
+  - Confirmed (no external learner data to override it); recorded under 2026-11-18 in `docs/decisions.md`, including the reduced triggers (giscus + aggregate until events are reviewable).
+- [x] Reorder Phases 13–14 if the data points elsewhere.
+  - No reorder — data pointed nowhere; structural order stands.
 
 ## Phase 13: Authentication and authorization guide
 
