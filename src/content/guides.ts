@@ -1,5 +1,6 @@
 import { authGuide } from './authGuide'
 import { backendApplicationGuide } from './backendApplicationGuide'
+import { backgroundJobsGuide } from './backgroundJobsGuide'
 import { cachingGuide } from './cachingGuide'
 import { clientHttpGuide } from './clientHttpGuide'
 import { databaseGuide } from './databaseGuide'
@@ -15,4 +16,5 @@ export const guides: Record<string, Guide> = {
   [cachingGuide.id]: cachingGuide,
   [databaseGuide.id]: databaseGuide,
   [responseGuide.id]: responseGuide,
+  [backgroundJobsGuide.id]: backgroundJobsGuide,
 }
