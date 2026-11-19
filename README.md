@@ -206,7 +206,7 @@ Status as of 2026-11-18 — full phase list and checkboxes live in [TODO.md](TOD
 3. **Build the guide experience:** Phases 4–5 — done.
 4. **Review with learners:** Phase 6 — done.
 5. **Release and expand deliberately:** Phase 7 — released; Phases 8–10 added a guide per journey step; Phase 11 finished accessibility hardening.
-6. **Grow from observed needs:** Phases 12–16 — Phases 12–14 done (usage-data gate, auth guide, message-queue guide); next: the failure-path scenario, then visual refinements.
+6. **Grow from observed needs:** Phases 12–16 — Phases 12–15 done (usage-data gate, auth guide, message-queue guide, failure-path scenario); next: visual refinements.
 7. **Later content waves:** Phase 17 placeholder (containers, cloud, CI/CD, monitoring guides) — unscheduled.
 
 ## Decisions

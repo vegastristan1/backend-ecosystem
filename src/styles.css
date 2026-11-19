@@ -685,6 +685,53 @@ h1 {
   opacity: 0.45;
 }
 
+/* Failure-path variant: red theme. The "Failure path" eyebrow is the
+   non-color signal (WCAG 1.4.1) — color alone never carries the meaning.
+   Contrast verified: white on #b3251c 6.6:1, #8f1d15 on #fdf3f2 8.2:1,
+   #8f1d15 on #fbe3e1 7.3:1. */
+.journey-explorer--failure {
+  border-color: #e3b7b3;
+  background: #fdf3f2;
+}
+
+.journey-explorer--failure .eyebrow,
+.journey-explorer--failure .journey-progress {
+  color: #8f1d15;
+}
+
+.journey-explorer--failure .journey-component--active {
+  border-color: #b3251c;
+  background: #b3251c;
+  box-shadow: 0 0 0 3px rgb(179 37 28 / 14%);
+}
+
+.journey-explorer--failure .journey-step-number {
+  background: #b3251c;
+}
+
+.journey-explorer--failure .journey-step-button > span {
+  color: #b3251c;
+}
+
+.journey-explorer--failure .journey-step-button:hover,
+.journey-explorer--failure .journey-step-button--active {
+  border-color: #b3251c;
+}
+
+.journey-explorer--failure .journey-step-button--active {
+  background: #fbe3e1;
+  color: #8f1d15;
+}
+
+.journey-explorer--failure .journey-step-button--active > span {
+  color: #8f1d15;
+}
+
+.journey-explorer--failure .journey-controls button:not(:disabled):hover {
+  border-color: #b3251c;
+  color: #8f1d15;
+}
+
 .section-intro {
   margin-bottom: 20px;
 }

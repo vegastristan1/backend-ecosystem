@@ -5,14 +5,18 @@ import type { RequestFlow } from '../content/types'
 
 interface RequestFlowExplorerProps {
   flow: RequestFlow
+  /** 'failure' themes the card red and labels it — the eyebrow text is the
+   * non-color signal, so the distinction never relies on color alone. */
+  variant?: 'failure'
 }
 
-export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
+export function RequestFlowExplorer({ flow, variant }: RequestFlowExplorerProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const activeStep = flow.steps[activeIndex]
   const activeGuide = activeStep.guideId ? guides[activeStep.guideId] : undefined
   const isFirstStep = activeIndex === 0
   const isLastStep = activeIndex === flow.steps.length - 1
+  const isFailure = variant === 'failure'
 
   function selectStep(index: number) {
     track('journey_step', { step: flow.steps[index].title, index: index + 1 })
@@ -24,10 +28,19 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
   }
 
   return (
-    <section className="journey-explorer" aria-labelledby="journey-explorer-title">
+    <section
+      className={
+        isFailure
+          ? 'journey-explorer journey-explorer--failure'
+          : 'journey-explorer'
+      }
+      aria-labelledby={`journey-explorer-title-${flow.id}`}
+    >
       <div className="section-intro">
-        <p className="eyebrow">Step through the request</p>
-        <h2 id="journey-explorer-title">{flow.title}</h2>
+        <p className="eyebrow">
+          {isFailure ? 'Failure path' : 'Step through the request'}
+        </p>
+        <h2 id={`journey-explorer-title-${flow.id}`}>{flow.title}</h2>
         <p>{flow.description}</p>
       </div>
 
@@ -35,7 +48,7 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
         Step {activeIndex + 1} of {flow.steps.length}
       </div>
 
-      <ol className="journey-system-map" aria-label="Backend system map">
+      <ol className="journey-system-map" aria-label={`${flow.title} system map`}>
         {flow.steps.map((step, index) => (
           <li className="journey-system-map-item" key={step.componentId}>
             <span
