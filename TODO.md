@@ -167,10 +167,14 @@ Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" p
 
 ## Phase 14: Background jobs and message queues guide
 
-- [ ] Draft the Background jobs and message queues guide (README curriculum step 12).
-- [ ] Register the guide and link it from the related guides (prerequisites / learn-next).
-- [ ] Verify build, review schedule, and search regressions.
-- [ ] Update the documents that reference the guide set.
+- [x] Draft the Background jobs and message queues guide (README curriculum step 12).
+  - `src/content/backgroundJobsGuide.ts`: enqueue → worker → ack, visibility timeout, retries, at-least-once delivery, dead-letter queue; 5 sources verified live (HTTP 200 — Apache Kafka intro, AWS SQS "What is SQS", RabbitMQ docs + tutorials, Azure Queue storage docs) and dated 2026-11-19; `status: 'review'` consistent with the other guides.
+- [x] Register the guide and link it from the related guides (prerequisites / learn-next).
+  - Added to `src/content/guides.ts` (sidebar, guides page, search, feedback term pick it up); `database` learn-next's existing `background-jobs` plain-text reference resolves to a real link, and `response` related-guides adds `background-jobs`; prerequisites are backend-application + database per `docs/learning-journey.md`.
+- [x] Verify build, review schedule, and search regressions.
+  - `npm run build` green (tsc + vite); `npm run reviews` shows 8/8 guides on track (new guide next due 2027-05-19); ad-hoc search check ALL PASS — the 7 regression queries (`redis`, `cache`, `make repeated reads faster`, `nginx`, `database`, `route browser requests`, nonsense) return identical results without the new guide, and `queue`/`kafka`/`background job`/`rabbitmq`/`worker`/`after the response`/`sqs` find it.
+- [x] Update the documents that reference the guide set.
+  - `README.md` "Later additions" (message queues removed — shipped) and delivery stage 6 (Phases 12–14 done), `docs/learning-journey.md` deep-dives paragraph (queues deep dive noted), `docs/backlog.md` (item shipped; nothing queued), `docs/decisions.md` Phase 14 pick recorded under 2026-11-19.
 
 ## Phase 15: Failure-path place-order scenario
 

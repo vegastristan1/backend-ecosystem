@@ -33,7 +33,7 @@ Supporting infrastructure is introduced around this path: containers and deploym
 | Containers and runtime packaging | Backend application basics | Deployment, cloud hosting | Deployment and CI/CD |
 | Observability and operations | A running application and basic deployment | Reliability, monitoring, debugging | Reliability and security practices |
 
-All six journey steps now have a deep dive: Client and HTTP request, Reverse proxy / NGINX, Backend application and API, Cache / Redis, Database, and Response, errors, and API contracts. Authentication and authorization (curriculum step 7) also has a deep dive, reached from the backend application and response guides rather than from a journey step. Foundation topics are short journey steps with links into those deep dives where appropriate. Every guide should expose its prerequisites, two or three related guides, and one recommended next topic so learners always have a clear continuation.
+All six journey steps now have a deep dive: Client and HTTP request, Reverse proxy / NGINX, Backend application and API, Cache / Redis, Database, and Response, errors, and API contracts. Authentication and authorization (curriculum step 7) and Background jobs and message queues (curriculum step 12) also have deep dives, reached from other guides rather than from a journey step — auth from the backend application and response guides, queues from the database (learn next) and response (related) guides. Foundation topics are short journey steps with links into those deep dives where appropriate. Every guide should expose its prerequisites, two or three related guides, and one recommended next topic so learners always have a clear continuation.
 
 ## Concept-before-product rule
 

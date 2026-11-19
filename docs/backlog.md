@@ -8,7 +8,7 @@ Promoted 2026-11-18 into TODO Phases 12–17: authentication guide, message-queu
 
 ## New guides
 
-- (none queued — Authentication and authorization shipped as Phase 13; message queues scheduled as Phase 14)
+- (none queued — Authentication and authorization shipped as Phase 13; background jobs and message queues shipped as Phase 14)
 
 ## New scenarios
 
