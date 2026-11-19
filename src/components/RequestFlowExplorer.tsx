@@ -24,10 +24,13 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
   }
 
   return (
-    <section className="journey-explorer" aria-labelledby="journey-explorer-title">
+    <section
+      className="journey-explorer"
+      aria-labelledby={`journey-explorer-title-${flow.id}`}
+    >
       <div className="section-intro">
         <p className="eyebrow">Step through the request</p>
-        <h2 id="journey-explorer-title">{flow.title}</h2>
+        <h2 id={`journey-explorer-title-${flow.id}`}>{flow.title}</h2>
         <p>{flow.description}</p>
       </div>
 
@@ -35,7 +38,7 @@ export function RequestFlowExplorer({ flow }: RequestFlowExplorerProps) {
         Step {activeIndex + 1} of {flow.steps.length}
       </div>
 
-      <ol className="journey-system-map" aria-label="Backend system map">
+      <ol className="journey-system-map" aria-label={`${flow.title} system map`}>
         {flow.steps.map((step, index) => (
           <li className="journey-system-map-item" key={step.componentId}>
             <span
