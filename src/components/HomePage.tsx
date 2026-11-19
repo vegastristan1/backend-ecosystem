@@ -34,7 +34,7 @@ export function HomePage() {
 
       <RequestFlowExplorer flow={orderRequestFlow} />
 
-      <RequestFlowExplorer flow={orderFailureFlow} />
+      <RequestFlowExplorer flow={orderFailureFlow} variant="failure" />
 
       <section
         className="journey-preview"
