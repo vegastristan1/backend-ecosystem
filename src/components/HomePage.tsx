@@ -1,4 +1,4 @@
-import { orderRequestFlow } from '../content/requestFlow'
+import { orderFailureFlow, orderRequestFlow } from '../content/requestFlow'
 import { RequestFlowExplorer } from './RequestFlowExplorer'
 
 export function HomePage() {
@@ -33,6 +33,8 @@ export function HomePage() {
       </section>
 
       <RequestFlowExplorer flow={orderRequestFlow} />
+
+      <RequestFlowExplorer flow={orderFailureFlow} />
 
       <section
         className="journey-preview"
