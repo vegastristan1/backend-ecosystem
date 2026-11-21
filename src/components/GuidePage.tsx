@@ -85,7 +85,8 @@ export function GuidePage({ guide }: GuidePageProps) {
         <p>{guide.position}</p>
       </aside>
 
-      <GuideVisual id={`${pageId}-visual`} visual={guide.visual} />
+      {/* key: step-selection state must reset when navigating between guides */}
+      <GuideVisual key={guide.id} id={`${pageId}-visual`} visual={guide.visual} />
 
       <section className="guide-section" aria-labelledby={`${pageId}-steps-title`}>
         <p className="eyebrow">From request to response</p>
