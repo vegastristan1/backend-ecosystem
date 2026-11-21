@@ -189,9 +189,12 @@ Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" p
 
 ## Phase 16: Visual refinements
 
-- [ ] Step-controlled animation for guide-page diagrams (no autoplay; static text fallback preserved; `prefers-reduced-motion` swaps stay instant).
-- [ ] Open Graph social preview image (`og:image` in `index.html`) so shared links show a preview.
-- [ ] Verify the build and accessibility regressions.
+- [x] Step-controlled animation for guide-page diagrams (no autoplay; static text fallback preserved; `prefers-reduced-motion` swaps stay instant).
+  - `GuideVisual.tsx`: steps are now buttons with `aria-current="step"`, an `aria-live` "Step x of y" progress line, and reused `journey-controls` Previous/Next buttons; `key={guide.id}` in `GuidePage.tsx` resets step state between guides. No autoplay — state changes only on user action; the new 160 ms highlight transition is covered by the existing `prefers-reduced-motion` block (verified: `0.16s` → `1e-05s` under reduce). Contrast AA on the active tint: explanation 4.7:1, counter 6.6:1 (accent-dark override), title 11.6:1.
+- [x] Open Graph social preview image (`og:image` in `index.html`) so shared links show a preview.
+  - `scripts/og-card.html` (regenerable source) → `public/og.png` 1200×630 via headless Chrome, on-brand palette/type; `index.html` adds og:title/description/url/image (+width/height/alt) and twitter:card/title/description/image with the absolute production URL. Verified served: `dist/og.png` 200, tags present in `dist/index.html`.
+- [x] Verify the build and accessibility regressions.
+  - `npm run build` green (tsc + vite); `npm run reviews` 8/8 on track. Zero-dep CDP browser check vs `npm run preview`: **23/23** (step controls + keyboard Enter activation, single `aria-current`, disabled edges, fallback text visible, reduced-motion instant, 0 page/console errors, 375px no overflow) plus 3/3 guide-switch state-reset checks; screenshots reviewed for active-state and mobile rendering. Search untouched by construction (no content files changed).
 
 ## Phase 17: Next content wave (roadmap, unscheduled)
 

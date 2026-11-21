@@ -1070,6 +1070,11 @@ h1 {
   counter-reset: visual-step;
 }
 
+.visual-steps li {
+  display: grid;
+  min-width: 0;
+}
+
 .visual-step {
   display: grid;
   align-content: start;
@@ -1080,9 +1085,28 @@ h1 {
   border-radius: 9px;
   background: #f8faf7;
   color: var(--color-muted);
+  font: inherit;
   font-size: 14px;
   line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
   counter-increment: visual-step;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+.visual-step:hover {
+  border-color: var(--color-accent);
+}
+
+.visual-step--active {
+  border-color: var(--color-accent);
+  background: #dff1eb;
+  box-shadow: 0 0 0 3px rgb(8 124 120 / 14%);
+}
+
+/* accent alone is 4.3:1 on the active tint; accent-dark clears AA */
+.visual-step--active .step-title::before {
+  color: var(--color-accent-dark);
 }
 
 .step-title {
