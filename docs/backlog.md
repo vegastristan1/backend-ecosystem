@@ -16,4 +16,4 @@ Promoted 2026-11-18 into TODO Phases 12–17: authentication guide, message-queu
 
 ## Visual refinements
 
-- (none queued — both items promoted to TODO Phase 16)
+- (none queued — both items shipped in TODO Phase 16)
