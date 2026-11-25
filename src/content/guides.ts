@@ -3,6 +3,7 @@ import { backendApplicationGuide } from './backendApplicationGuide'
 import { backgroundJobsGuide } from './backgroundJobsGuide'
 import { cachingGuide } from './cachingGuide'
 import { clientHttpGuide } from './clientHttpGuide'
+import { containersGuide } from './containersGuide'
 import { databaseGuide } from './databaseGuide'
 import { responseGuide } from './responseGuide'
 import { reverseProxyGuide } from './reverseProxyGuide'
@@ -17,4 +18,5 @@ export const guides: Record<string, Guide> = {
   [databaseGuide.id]: databaseGuide,
   [responseGuide.id]: responseGuide,
   [backgroundJobsGuide.id]: backgroundJobsGuide,
+  [containersGuide.id]: containersGuide,
 }
