@@ -203,7 +203,8 @@ Scheduled 2026-11-25 from README "Later additions". Data gate first: no learner 
 - [x] Schedule the next batch (data gate checked; batch, order, and deferrals recorded in `docs/decisions.md`).
 - [x] Containers and runtime packaging guide (curriculum step 15): draft, register, link from the backend-application guide, verify, update docs.
   - Shipped on `phase-17-deployment-wave`: `src/content/containersGuide.ts` (5 sources verified HTTP 200 — Docker ×3, Google Cloud, OCI image spec), registered in `guides.ts`, linked from backend-application learn-next. Build green, reviews 9/9 (containers due 2027-05-25), search check 12/12 (7 regression + 5 new queries). README "Later additions" and learning-journey deep-dives updated.
-- [ ] Deployment and CI/CD guide (curriculum step 16): same flow.
+- [x] Deployment and CI/CD guide (curriculum step 16): same flow.
+  - Shipped on `phase-17-deployment-wave`: `src/content/deploymentGuide.ts` (5 sources verified HTTP 200 — GitHub Actions, GitLab CI, Jenkins, Azure DevOps, Red Hat CI/CD), registered; containers' learn-next `deployment` resolves to a link. Build green (`index-C8oMTU_c.js`), reviews 10/10 (deployment due 2027-05-25), search check 12/12. Authoring bug caught by verification: import added without the record entry (elided by tree-shaking) — fixed and amended into the registration commit. README + learning-journey updated.
 - [ ] Cloud and hosting guide (curriculum step 17): same flow.
 - [ ] Observability and monitoring guide (curriculum step 19): same flow.
 - [ ] Add one more example architecture / request scenario.
