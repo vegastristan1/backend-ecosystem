@@ -201,7 +201,8 @@ Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" p
 Scheduled 2026-11-25 from README "Later additions". Data gate first: no learner signal exists (giscus still test-only, all GitHub issues internal), so the batch is curriculum-driven like Phases 12–14 — the remaining deployment-path steps in order. Each guide follows the established flow: draft with verified sources → register + link → build/reviews/search verification → docs updates. Kubernetes/orchestration (curriculum step 18) is deferred to the next wave — the placeholder did not name it and it needs containers + cloud context first.
 
 - [x] Schedule the next batch (data gate checked; batch, order, and deferrals recorded in `docs/decisions.md`).
-- [ ] Containers and runtime packaging guide (curriculum step 15): draft, register, link from the backend-application guide, verify, update docs.
+- [x] Containers and runtime packaging guide (curriculum step 15): draft, register, link from the backend-application guide, verify, update docs.
+  - Shipped on `phase-17-deployment-wave`: `src/content/containersGuide.ts` (5 sources verified HTTP 200 — Docker ×3, Google Cloud, OCI image spec), registered in `guides.ts`, linked from backend-application learn-next. Build green, reviews 9/9 (containers due 2027-05-25), search check 12/12 (7 regression + 5 new queries). README "Later additions" and learning-journey deep-dives updated.
 - [ ] Deployment and CI/CD guide (curriculum step 16): same flow.
 - [ ] Cloud and hosting guide (curriculum step 17): same flow.
 - [ ] Observability and monitoring guide (curriculum step 19): same flow.
