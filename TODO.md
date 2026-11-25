@@ -2,7 +2,7 @@
 
 This is the step-by-step implementation checklist for the first release. Complete each phase in order, but revisit earlier tasks when user feedback or technical discoveries require it.
 
-Phases 0–11 are shipped (MVP released and maintained). Phases 12–17 are the roadmap promoted from `docs/backlog.md` on 2026-11-18: 12–16 are scheduled work, 17 is an unscheduled placeholder for later content waves.
+Phases 0–16 are shipped (MVP released and maintained; Phase 16 visual refinements merged 2026-11-21). Phases 12–17 were promoted from `docs/backlog.md` on 2026-11-18; Phase 17 was scheduled on 2026-11-25 as the deployment-path content wave.
 
 ## Phase 0: Confirm the foundation
 
@@ -196,11 +196,17 @@ Decision gate promised in `docs/decisions.md` (2026-11-10): every "next guide" p
 - [x] Verify the build and accessibility regressions.
   - `npm run build` green (tsc + vite); `npm run reviews` 8/8 on track. Zero-dep CDP browser check vs `npm run preview`: **23/23** (step controls + keyboard Enter activation, single `aria-current`, disabled edges, fallback text visible, reduced-motion instant, 0 page/console errors, 375px no overflow) plus 3/3 guide-switch state-reset checks; screenshots reviewed for active-state and mobile rendering. Search untouched by construction (no content files changed).
 
-## Phase 17: Next content wave (roadmap, unscheduled)
+## Phase 17: Next content wave (deployment path)
 
-Placeholder so the roadmap lives in one file — details defined when scheduled into a real phase.
+Scheduled 2026-11-25 from README "Later additions". Data gate first: no learner signal exists (giscus still test-only, all GitHub issues internal), so the batch is curriculum-driven like Phases 12–14 — the remaining deployment-path steps in order. Each guide follows the established flow: draft with verified sources → register + link → build/reviews/search verification → docs updates. Kubernetes/orchestration (curriculum step 18) is deferred to the next wave — the placeholder did not name it and it needs containers + cloud context first.
 
-- [ ] Schedule the next batch from README "Later additions": containers, cloud hosting, CI/CD, and monitoring guides, plus more example architectures and request scenarios.
+- [x] Schedule the next batch (data gate checked; batch, order, and deferrals recorded in `docs/decisions.md`).
+- [ ] Containers and runtime packaging guide (curriculum step 15): draft, register, link from the backend-application guide, verify, update docs.
+- [ ] Deployment and CI/CD guide (curriculum step 16): same flow.
+- [ ] Cloud and hosting guide (curriculum step 17): same flow.
+- [ ] Observability and monitoring guide (curriculum step 19): same flow.
+- [ ] Add one more example architecture / request scenario.
+- [ ] Update the documents that reference the guide set.
 
 ## Definition of done for the MVP
 

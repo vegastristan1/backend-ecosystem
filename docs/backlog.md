@@ -4,7 +4,7 @@ Living queue of work outside the current scope. Roadmap-level items (knowledge c
 
 **Maintenance:** append an item during any phase with a short source note; promote it into a TODO phase when it is scheduled; delete it once shipped.
 
-Promoted 2026-11-18 into TODO Phases 12–17: authentication guide, message-queue guide, failure-path scenario, step-controlled guide animation, OG social preview, and the next content wave (README "Later additions"). What remains below is unprioritized overflow.
+Promoted 2026-11-18 into TODO Phases 12–17: authentication guide, message-queue guide, failure-path scenario, step-controlled guide animation, OG social preview, and the next content wave (README "Later additions"). The next content wave was scheduled 2026-11-25 as Phase 17 (deployment path: containers, CI/CD, cloud, monitoring). What remains below is unprioritized overflow.
 
 ## New guides
 
